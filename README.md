@@ -4,7 +4,7 @@
 </div>
 <br>
 <div align="center">
-<img src='bbpr.gif'>
+<img src='bbpr2.gif'>
 </div>
 
 <h1 id="installation">Installation</h1>
