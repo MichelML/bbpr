@@ -78,7 +78,7 @@ That's it, may you and your teammates enjoy the BBPR way of doing BitBucket pull
   
 <h1 id="contribute">Contribute</h1>
 
-Please do not hesitate to make any change at any time with a pull request.
+Please do not hesitate to make any change at any time with a pull request for this repository.
   
 <h1 id="maintainer">Maintainer</h1>
  
