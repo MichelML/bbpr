@@ -1,45 +1,29 @@
-// specify if users should be prompted to add a demo to their PR
-exports.demo = {
-    shouldPrompt: true,
-    shouldPromptDescription: true,
-    basePath: 'https://platformdev.cloud.coveo.com/admin/feature',
-};
-
-// add the name of your organization in BitBucket
+// REQUIRED ENTRIES. The organization name must absolutely be provided by the user.
 exports.organization = {
-    name: 'coveord',
+    name: '', // String. Add the name of your organization in BitBucket (ex: mycompanyid )  
 };
 
-// add your bitbucket username
+// OPTIONAL ENTRIES. Change or leave defaults.
 exports.user = {
-    name: 'michelmoreaul',
-}
+    name: '', // String. Provide your BitBucket username (ex: michelmoreaul) so you don't have to type it at each session.
+};
 
-// add default and potential reviewers
+exports.demo = {
+    shouldPrompt: false, // Boolean. Set to true if you'll need a demo link with your PR.
+    shouldPromptDescription: false, // Boolean. Set to true if you'll need a description with your demo.
+    basePath: '', // String. Base path to your demo (ex. hhtps://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+};
+
 exports.reviewers = {
-    default: [
-        "gbergeroncoveo",
-        "michelmoreaul",
-        "pochretien",
-        "sroy3",
-        "vseguin",
-    ],
-    potential: [
-        "acverrette",
-        "alexandre_drouin",
-        "jplachance",
-        "ksampson",
-        "marjorie_doucet",
-        "rousselm4",
-    ]
-}
+    default: [], // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who are assign to reviewing your work. An empty Array is also valid. 
+    potential: [] // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who may be assigned to reviewing your work. An empty Array is also valid.
+};
 
-// add information related to your branches
 exports.branches = {
     source: {
-        close: true
+        close: true // Boolean. Set to false if you do not want to close your source branch when you merge your PR.
     },
     dest: {
-        default: 'default'
+        default: 'default' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
     }
-}
+};

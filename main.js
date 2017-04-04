@@ -14,6 +14,7 @@ const shell = require('shelljs');
 let additionalReviewers = [];
 let allReviewers;
 let destinationBranch;
+let usernameBitBucket;
 let passwordBitBucket;
 let pullRequestTitle;
 let pullRequestDescription;
@@ -28,12 +29,13 @@ pullRequestInfoEmitter.on('info:complete', () => {
         pullRequestDescription,
         destinationBranch,
         allReviewers,
+        usernameBitBucket,
         passwordBitBucket
     );
 
     console.log('Making sure your current branch exists remotely...'.bold);
     shell.exec(
-        `hg push https://${config.user.name}:${passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
+        `hg push https://${usernameBitBucket}:${passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
         () => pr.sendPullRequest(postRequest)
     );
 });
@@ -42,7 +44,17 @@ function startInfoRetrieval() {
     co(function*() {
             console.log('\nPULL REQUEST INFORMATION RETRIEVAL'.bold);
             console.log('(press ctrl-c to quit at any time)'.gray);
-	    console.log(`${'bitbucket user: \n'.green}${config.user.name.bold.underline}`);
+
+            usernameBitBucket = config.user.name || '';
+            if (usernameBitBucket) {
+                console.log(`${'bitbucket username: \n'.green}${usernameBitBucket.bold.underline}`);
+            } else {
+                usernameBitBucket = yield prompt(`bitbucket username: \n`.green);
+                if (!usernameBitBucket) {
+                    throw ('Please provide a non empty and valid BitBucket user name.');
+                }
+            }
+
             // prompt for password
             passwordBitBucket = yield prompt.password(`bitbucket password: \n`.green);
 
@@ -90,7 +102,7 @@ function startInfoRetrieval() {
             allReviewers = reviewers.getAllReviewers(additionalReviewers);
 
             // present info review to user
-            presentInfoReview(destinationBranch, pullRequestTitle, pullRequestDescription, allReviewers);
+            presentInfoReview(destinationBranch, pullRequestTitle, pullRequestDescription, allReviewers, usernameBitBucket);
 
             // prompt information confirmation
             let isAllInfoCorrect = yield prompt.confirm('Above is your pull request summary. Is all the information correct (y/n)? '.bold.cyan);
