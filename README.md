@@ -8,12 +8,10 @@
 </div>
 
 <h1 id="synopsis">Synopsis</h1>
-BBPR (BitBucket Pull Requests) is an interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. BBPR partners up with you on that journey, so that __your future pull requests will always be picture perfect__.   
+BBPR (BitBucket Pull Requests) is an interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. BBPR partners up with you on that journey, so that your future pull requests will always be picture perfect.   
 
 <h1 id="synopsis">How it works</h1>
-When you start a BBPR session, you simply answer questions about your upcoming PR so that BBPR can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, BBPR sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust yourself.
-  
-It's that simple.  
+When you start a BBPR session, you simply answer questions about your upcoming PR so that BBPR can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, BBPR sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
  
 <h1 id="installation">Installation</h1>
 <h3>Step 1: Prerequisites</h3> 
@@ -33,11 +31,13 @@ After this command is executed,  move to the local directory and install all dep
 
 ```  
 cd bbpr && npm install 
-```    
+```     
+
+Congratulations, BBPR is now installed properly.
 
 <h1 id="Configuration">Use and Configuration</h1>  
 
-BBPR comes bundled with a configuration file (`bbpr.config.js`) by default. That being said, you must absolutely provide a BitBucket organization name (ex: mycompanyid) before using BBPR. **Your BitBucket organization name is the only required entry you must provide by hand**.  
+BBPR comes bundled with a configuration file (`bbpr.config.js`) by default. That being said, you must absolutely provide a BitBucket organization name (ex: mycompanyid) before using BBPR. **Your BitBucket organization name is the only required entry you must provide by hand, otherwise the program will throw**.   
   
 Default configuration file overview:  
 
@@ -72,7 +72,7 @@ exports.branches = {
     }
 };
 ```  
-Once this step is done, you are ready to go. You can run `node <path to your local bbpr>/bbpr` from within your local repository for which you want to makea pull request, and a session will start. If you cloned BBPR at the location suggested in the <a href="#installation">install section</a>, simply running `node ../bbpr` should work flawlessly.
+Once this step is done, you are ready to go. You can run `node <path to your local bbpr>/bbpr` from within your local repository for which you want to make a pull request, and a session will start. If you cloned BBPR at the location suggested in the <a href="#installation">install section</a>, simply running `node ../bbpr` should work flawlessly.
 
 That's it, may you and your teammates enjoy the BBPR way of doing BitBucket pull requests!
   
