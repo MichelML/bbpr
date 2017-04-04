@@ -16,7 +16,7 @@ When you start a BBPR session, you simply answer questions about your upcoming P
 <h1 id="installation">Installation</h1>
 <h3>Step 1: Prerequisites</h3> 
 
-First, make sure you have the following installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a>.   
+First, make sure you have the following installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, <a href="https://git-scm.com/">git</a>, and <a href="https://www.mercurial-scm.org/">mercurial</a>.   
 
 
 <h3>Step 2: Clone and Install</h3>
