@@ -33,7 +33,7 @@ pullRequestInfoEmitter.on('info:complete', () => {
 
     console.log('Making sure your current branch exists remotely...'.bold);
     shell.exec(
-        `hg push https://${userNameBitBucket}:${passwordBitBucket}@bitbucket.org/${orgNameBitBucket}/${repositoryName} --new-branch -b ${currentBranch}`,
+        `hg push https://${config.user.name}:${passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
         () => pr.sendPullRequest(postRequest)
     );
 });
