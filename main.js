@@ -96,7 +96,7 @@ function startInfoRetrieval() {
                 if (needAdditionalReviewers) {
                     console.log(`\nPotential additional reviewers by username:\n`.bold + `${config.reviewers.potential.join('\n')}`);
                     additionalReviewers = yield prompt('\nadd each additional reviewer\'s username seperated with a comma (ex: firstuser,seconduser)): \n'.green);
-                    additionalReviewers = reviewers.retrieveAddedReviewers(additionalReviewers);
+                    additionalReviewers = reviewers.retrieveAddedReviewers(additionalReviewers, usernameBitBucket);
                 }
             }
             allReviewers = reviewers.getAllReviewers(additionalReviewers);
