@@ -63,7 +63,7 @@ function startInfoRetrieval() {
                 }
             } else if (!config.user.name && config.user.cachePwd) {
                 throw ('Error. You indicated wanting to cache your password without providing a default username in your config file.')
-	    } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
+            } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
                 throw ('Error. The value stored in the user password property in your config file should be set to null or type String.')
             } else {
                 passwordBitBucket = crypt.decrypt(config.user.password);
@@ -88,7 +88,12 @@ function startInfoRetrieval() {
                     pullRequestDescription += `demo link (wait for the build to be green before reviewing and/or testing the demo):\n`;
 
                     let demoHash = yield prompt('\nhash pointing to your demo, press enter if none (ex: #devdailyratlab/content/sources/):\n'.green);
-                    let demoLink = `${config.demo.basePath}/${hg.getRepositoryName()}/${hg.getCurrentBranchName()}/?dev#${demoHash ? hash.cleanHash(demoHash) : ''}`;
+                    let repoNameForDemo = hg.getRepositoryName().split('-');
+                    repoNameForDemo = repoNameForDemo.length === 2 ?
+                        repoNameForDemo.join('-') :
+                        `${repoNameForDemo[0]}-${repoNameForDemo[1].substr(0,1)}${repoNameForDemo[2].substr(0,1)}`;
+
+                    let demoLink = `${config.demo.basePath}/${repoNameForDemo}/${hg.getCurrentBranchName()}/?dev#${demoHash ? hash.cleanHash(demoHash) : ''}`;
                     pullRequestDescription += demoLink;
 
                     if (config.demo.shouldPromptDescription) {
