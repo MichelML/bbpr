@@ -6,6 +6,11 @@ exports.organization = {
 // OPTIONAL ENTRIES. Change or leave defaults.
 exports.user = {
     name: '', // String. Provide your BitBucket username (ex: michelmoreaul) so you don't have to type it at each session.
+    password: null, // null or String. 
+    // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next BBPR sessions.
+    // If not null and cachePwd is set to true, it will use the encrypted password stored in this property. 
+    // In any other case, you will be prompted at each BBPR session to provide your BitBucket password.
+    cachePwd: true, // Boolean. See the password property for detailed explanation.
 };
 
 exports.demo = {

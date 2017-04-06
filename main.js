@@ -1,6 +1,7 @@
 const co = require('co');
 const config = require('./bbpr.config');
 const colors = require('colors');
+const crypt = require('./lib/crypt');
 const emitter = require('events');
 const hash = require('./lib/hash');
 const hg = require('./lib/hg');
@@ -56,7 +57,16 @@ function startInfoRetrieval() {
             }
 
             // prompt for password
-            passwordBitBucket = yield prompt.password(`bitbucket password: \n`.green);
+            if (config.user.password === null || !config.user.cachePwd) {
+                passwordBitBucket = yield prompt.password(`bitbucket password: \n`.green);
+                if (config.user.cachePwd) {
+                    crypt.crypt(passwordBitBucket);
+                }
+            } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
+                throw ('Error. The value stored in the user password property in your config file should be set to null or type String.')
+            } else {
+                passwordBitBucket = crypt.decrypt(config.user.password);
+            }
 
             // prompt for destination branch
             destinationBranch = yield prompt('destination branch (press enter to choose your default branch): \n'.green);
