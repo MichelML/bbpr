@@ -56,33 +56,31 @@ function startInfoRetrieval() {
                 }
             }
 
-            // prompt for password
             if (config.user.password === null || !config.user.cachePwd) {
                 passwordBitBucket = yield prompt.password(`bitbucket password: \n`.green);
                 if (config.user.cachePwd) {
                     crypt.crypt(passwordBitBucket);
                 }
-            } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
+            } else if (!config.user.name && config.user.cachePwd) {
+                throw ('Error. You indicated wanting to cache your password without providing a default username in your config file.')
+	    } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
                 throw ('Error. The value stored in the user password property in your config file should be set to null or type String.')
             } else {
                 passwordBitBucket = crypt.decrypt(config.user.password);
             }
 
-            // prompt for destination branch
             destinationBranch = yield prompt('destination branch (press enter to choose your default branch): \n'.green);
             destinationBranch = destinationBranch || config.branches.dest.default;
             if (!destinationBranch) {
                 throw ('Please provide a default branch in your config file or provide a non empty destination branch.');
             }
 
-            // prompt for pull request information
             pullRequestTitle = yield prompt('pull request title: \n'.green);
             pullRequestTitle = pullRequestTitle || '';
 
             pullRequestDescription = yield prompt.multiline('pull request description (add an empty line to complete the description): '.green);
             pullRequestDescription = pullRequestDescription || '';
 
-            // demo handling
             if (config.demo.shouldPrompt) {
                 let needADemo = yield prompt.confirm('does your pull request need a demo (y/n)? '.yellow);
                 if (needADemo) {
