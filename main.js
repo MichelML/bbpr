@@ -91,7 +91,7 @@ function startInfoRetrieval() {
                     let repoNameForDemo = hg.getRepositoryName().split('-');
                     repoNameForDemo = repoNameForDemo.length === 2 ?
                         repoNameForDemo.join('-') :
-                        `${repoNameForDemo[0]}-${repoNameForDemo[1].substr(0,1)}${repoNameForDemo[2].substr(0,1)}`;
+                        `${repoNameForDemo[0]}-${repoNameForDemo[1][0]}${repoNameForDemo[2][0]}`;
 
                     let demoLink = `${config.demo.basePath}/${repoNameForDemo}/${hg.getCurrentBranchName()}/?dev#${demoHash ? hash.cleanHash(demoHash) : ''}`;
                     pullRequestDescription += demoLink;
