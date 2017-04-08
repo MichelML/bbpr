@@ -59,7 +59,8 @@ function startInfoRetrieval() {
             if (config.user.password === null || !config.user.cachePwd) {
                 passwordBitBucket = yield prompt.password(`bitbucket password: \n`.green);
                 if (config.user.cachePwd) {
-                    crypt.crypt(passwordBitBucket);
+                    const pwd = crypt.crypt(passwordBitBucket);
+                    crypt.cachePwd(pwd);
                 }
             } else if (!config.user.name && config.user.cachePwd) {
                 throw ('Error. You indicated wanting to cache your password without providing a default username in your config file.')
