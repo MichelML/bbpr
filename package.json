@@ -1,24 +1,24 @@
 {
-    "name": "bbpr",
-    "version": "1.0.0",
-    "description": "Make pull requests through the Bitbucket API 2.0",
-    "main": "main.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index"
-    },
-    "author": "Michel Moreau",
-    "license": "MIT",
-    "dependencies": {
-        "co": "^4.6.0",
-        "co-fs": "^1.2.0",
-        "co-prompt": "^1.0.0",
-        "colors": "^1.1.2",
-        "open": "0.0.5",
-        "prompt": "^1.0.0",
-        "shelljs": "^0.7.7"
-    },
-    "bin": {
-        "bbpr": "./main.js"
-    }
+  "name": "bbpr",
+  "version": "1.0.1",
+  "description": "Make pull requests through the Bitbucket API 2.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "Michel Moreau",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-fs": "^1.2.0",
+    "co-prompt": "^1.0.0",
+    "colors": "^1.1.2",
+    "open": "0.0.5",
+    "prompt": "^1.0.0",
+    "shelljs": "^0.7.7"
+  },
+  "bin": {
+    "bbpr": "./main.js"
+  }
 }
