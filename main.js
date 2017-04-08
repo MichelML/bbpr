@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const co = require('co');
-const config = require('./bbpr.config');
+const config = require('./bbpr.config.json');
 const colors = require('colors');
 const crypt = require('./lib/crypt');
 const emitter = require('events');
