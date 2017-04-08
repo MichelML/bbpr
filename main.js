@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const co = require('co');
 const config = require('./bbpr.config');
 const colors = require('colors');
