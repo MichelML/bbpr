@@ -19,9 +19,13 @@ let usernameBitBucket;
 let passwordBitBucket;
 let pullRequestTitle;
 let pullRequestDescription;
+let hasRestarted = false;
 
 startInfoRetrieval();
-pullRequestInfoEmitter.on('info:redo', startInfoRetrieval);
+pullRequestInfoEmitter.on('info:redo', () => {
+    hasRestarted = true;
+    startInfoRetrieval();
+});
 
 pullRequestInfoEmitter.on('info:complete', () => {
     console.log('\nPREPARING PULL REQUEST\n'.bold);
@@ -67,7 +71,9 @@ function startInfoRetrieval() {
             } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
                 throw ('Error. The value stored in the user password property in your config file should be set to null or type String.')
             } else {
-                passwordBitBucket = crypt.decrypt(config.user.password);
+                if (!hasRestarted) {
+                    passwordBitBucket = crypt.decrypt(config.user.password);
+                }
             }
 
             destinationBranch = yield prompt('destination branch (press enter to choose your default branch): \n'.green);
