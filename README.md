@@ -85,4 +85,4 @@ Please do not hesitate to make any change at any time to BBPR by submitting a pu
   
 <h1 id="maintainer">Maintainer</h1>
  
-Michel Moreau - [mmlapointe@coveo.com](mailto:mmlapointe@coveo.com?Subject=BBPR%20Project) 
+Michel Moreau - [michmoreau.l@gmail.com](mailto:michmoreau.l@gmail.com?Subject=BBPR%20Project) 
