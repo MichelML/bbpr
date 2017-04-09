@@ -1,27 +1,27 @@
 {
     "organization": {
-        "name": "" 
+        "name": ""
     },
     "user": {
-        "name": "", 
-        "password": null, 
-        "cachePwd": false 
+        "name": "",
+        "password": null,
+        "cachePwd": false
     },
     "demo": {
-        "shouldPrompt": false, 
-        "shouldPromptDescription": false, 
-        "basePath": "" 
+        "shouldPrompt": false,
+        "shouldPromptDescription": false,
+        "basePath": ""
     },
     "reviewers": {
-        "default": [], 
-        "potential": [] 
+        "default": [],
+        "potential": []
     },
     "branches": {
         "source": {
-            "close": true 
+            "close": true
         },
         "dest": {
-            "default": "default" 
+            "default": "default"
         }
     }
 }
