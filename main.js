@@ -8,12 +8,14 @@ const EventEmitter = require('events')
 const hash = require('./lib/hash')
 const hg = require('./lib/hg')
 const outputError = require('./lib/output-error')
-const presentInfoReview = require('./lib/present-info')
 const pr = require('./lib/pr')
+const presentInfoReview = require('./lib/present-info')
+const promptStrings = require('./lib/strings').prompt
 const pullRequestInfoEmitter = new EventEmitter()
 const prompt = require('co-prompt')
 const reviewers = require('./lib/reviewers')
 const shell = require('shelljs')
+const strings = require('./lib/strings')
 
 let additionalReviewers = []
 let allReviewers
@@ -31,7 +33,7 @@ pullRequestInfoEmitter.on('info:redo', () => {
 })
 
 pullRequestInfoEmitter.on('info:complete', () => {
-  console.log('\nPREPARING PULL REQUEST\n'.bold)
+  console.log(strings.preparingPullRequest.bold)
   const postRequest = pr.buildPullRequest(
     pullRequestTitle,
     pullRequestDescription,
@@ -41,7 +43,7 @@ pullRequestInfoEmitter.on('info:complete', () => {
     passwordBitBucket
   )
 
-  console.log('Making sure your current branch exists remotely...'.bold)
+  console.log(strings.creatingRemoteBranch.bold)
   shell.exec(
     `hg push https://${usernameBitBucket}:${passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
     () => pr.sendPullRequest(postRequest)
@@ -66,16 +68,16 @@ function startInfoRetrieval() {
 }
 
 function showInfoRetrievalHeader() {
-  console.log('\nPULL REQUEST INFORMATION RETRIEVAL'.bold)
+  console.log(strings.pullRequestInfoRetrieval.bold)
   console.log('(press ctrl-c to quit at any time)'.gray)
 }
 
 function* promptUser() {
-  usernameBitBucket = config.user.name || 'h'
+  usernameBitBucket = config.user.name
   if (usernameBitBucket) {
-    console.log(`${'bitbucket username: \n'.green}${usernameBitBucket.bold.underline}`)
+    console.log(`${promptStrings.bitBucketUserName.green}${usernameBitBucket.bold.underline}`)
   } else {
-    usernameBitBucket = yield prompt(`bitbucket username: \n`.green)
+    usernameBitBucket = yield prompt(promptStrings.bitBucketUserName.green)
     if (!usernameBitBucket) {
       throw (new Error(errors.username))
     }
@@ -84,7 +86,7 @@ function* promptUser() {
 
 function* promptPassword() {
   if (config.user.password === null || !config.user.cachePwd) {
-    passwordBitBucket = yield prompt.password('bitbucket password: \n'.green)
+    passwordBitBucket = yield prompt.password(promptStrings.bitBucketPassword.green)
     if (config.user.cachePwd) {
       const pwd = crypt.crypt(passwordBitBucket)
       crypt.cachePwd(pwd)
@@ -101,7 +103,7 @@ function* promptPassword() {
 }
 
 function* promptDestinationBranch() {
-  destinationBranch = yield prompt('destination branch (press enter to choose your default branch): \n'.green)
+  destinationBranch = yield prompt(promptStrings.destinationBranch.green)
   destinationBranch = destinationBranch || config.branches.dest.default
   if (!destinationBranch) {
     throw (new Error(errors.destinationBranch))
@@ -109,23 +111,23 @@ function* promptDestinationBranch() {
 }
 
 function* promptTitle() {
-  pullRequestTitle = yield prompt('pull request title: \n'.green)
+  pullRequestTitle = yield prompt(promptStrings.pullRequestTitle.green)
   pullRequestTitle = pullRequestTitle || ''
 }
 
 function* promptDescription() {
-  pullRequestDescription = yield prompt.multiline('pull request description (add an empty line to complete the description): '.green)
+  pullRequestDescription = yield prompt.multiline(promptStrings.pullRequestDescription.green)
   pullRequestDescription = pullRequestDescription || ''
 }
 
 function* promptDemo() {
   if (config.demo.shouldPrompt) {
-    let needADemo = yield prompt.confirm('does your pull request need a demo (y/n)? '.yellow)
+    let needADemo = yield prompt.confirm(promptStrings.needADemo.yellow)
     if (needADemo) {
       pullRequestDescription += pullRequestDescription ? '\n\n' : ''
-      pullRequestDescription += `demo link (wait for the build to be green before reviewing and/or testing the demo):\n`
+      pullRequestDescription += promptStrings.demoLinkIntro
 
-      let demoHash = yield prompt('\nhash pointing to your demo, press enter if none (ex: #devdailyratlab/content/sources/):\n'.green)
+      let demoHash = yield prompt(promptStrings.demoHash.green)
       let repoNameForDemo = hg.getRepositoryName().split('-')
       repoNameForDemo = repoNameForDemo.length === 2
         ? repoNameForDemo.join('-')
@@ -135,7 +137,7 @@ function* promptDemo() {
       pullRequestDescription += demoLink
 
       if (config.demo.shouldPromptDescription) {
-        let demoSpecifications = yield prompt.multiline('describe what should be tested (add an empty line to complete the description): '.green)
+        let demoSpecifications = yield prompt.multiline(promptStrings.demoSpecifications.green)
         pullRequestDescription += demoSpecifications ? `\n\n${demoSpecifications}` : ''
       }
     }
@@ -144,10 +146,10 @@ function* promptDemo() {
 
 function* promptReviewers() {
   if (config.reviewers.potential.length) {
-    let needAdditionalReviewers = yield prompt.confirm('does your pull request need additional reviewers (y/n)? '.yellow)
+    let needAdditionalReviewers = yield prompt.confirm(promptStrings.needReviewers.yellow)
     if (needAdditionalReviewers) {
-      console.log(`\nPotential additional reviewers by username:\n`.bold + `${config.reviewers.potential.join('\n')}`)
-      additionalReviewers = yield prompt("\nadd each additional reviewer's username seperated with a comma (ex: firstuser,seconduser)): \n".green)
+      console.log(promptStrings.additionalReviewers.bold + `${config.reviewers.potential.join('\n')}`)
+      additionalReviewers = yield prompt(promptDescriptions.additionalReviewersSpecifications.green)
       additionalReviewers = reviewers.retrieveAddedReviewers(additionalReviewers)
     }
   }
@@ -157,10 +159,10 @@ function* promptReviewers() {
 function* isAllInfoCorrect() {
   presentInfoReview(destinationBranch, pullRequestTitle, pullRequestDescription, allReviewers, usernameBitBucket)
 
-  let isAllInfoCorrect = yield prompt.confirm('Above is your pull request summary. Is all the information correct (y/n)? '.bold.cyan)
+  let isAllInfoCorrect = yield prompt.confirm(promptStrings.isAllInfoCorrect.bold.cyan)
   process.stdin.pause()
   if (!isAllInfoCorrect) {
-    console.log('\nRESTARTING PULL REQUEST INFORMATION RETRIEVAL'.gray)
+    console.log(strings.pullRequestRestartingInfoRetrieval.gray)
     pullRequestInfoEmitter.emit('info:redo')
   } else {
     pullRequestInfoEmitter.emit('info:complete')
