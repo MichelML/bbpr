@@ -3,6 +3,7 @@ require('colors')
 const co = require('co')
 const config = require('./bbpr.config.json')
 const crypt = require('./lib/crypt')
+const errors = require('./lib/strings').errors
 const EventEmitter = require('events')
 const hash = require('./lib/hash')
 const hg = require('./lib/hg')
@@ -58,20 +59,20 @@ function startInfoRetrieval () {
     } else {
       usernameBitBucket = yield prompt(`bitbucket username: \n`.green)
       if (!usernameBitBucket) {
-        throw (new Error('Please provide a non empty and valid BitBucket user name.'))
+        throw (new Error(errors.username))
       }
     }
 
     if (config.user.password === null || !config.user.cachePwd) {
-      passwordBitBucket = yield prompt.password(`bitbucket password: \n`.green)
+      passwordBitBucket = yield prompt.password('bitbucket password: \n'.green)
       if (config.user.cachePwd) {
         const pwd = crypt.crypt(passwordBitBucket)
         crypt.cachePwd(pwd)
       }
     } else if (!config.user.name && config.user.cachePwd) {
-      throw (new Error('Error. You indicated wanting to cache your password without providing a default username in your config file.'))
+      throw (new Error(errors.cachePassword))
     } else if (config.user.cachePwd && !(typeof config.user.password === 'string')) {
-      throw (new Error('Error. The value stored in the user password property in your config file should be set to null or type String.'))
+      throw (new Error(errors.unknownPasswordType))
     } else {
       if (!hasRestarted) {
         passwordBitBucket = crypt.decrypt(config.user.password)
@@ -81,7 +82,7 @@ function startInfoRetrieval () {
     destinationBranch = yield prompt('destination branch (press enter to choose your default branch): \n'.green)
     destinationBranch = destinationBranch || config.branches.dest.default
     if (!destinationBranch) {
-      throw (new Error('Please provide a default branch in your config file or provide a non empty destination branch.'))
+      throw (new Error(errors.destinationBranch))
     }
 
     pullRequestTitle = yield prompt('pull request title: \n'.green)
