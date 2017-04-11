@@ -22,7 +22,7 @@
     "standard": "^10.0.1"
   },
   "homepage": "https://github.com/MichelML/bbpr",
-  "keyword": [
+  "keywords": [
     "bbpr",
     "bitbucket",
     "command-line",
