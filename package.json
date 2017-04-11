@@ -45,5 +45,5 @@
     "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.6.4"
+  "version": "1.6.5"
 }
