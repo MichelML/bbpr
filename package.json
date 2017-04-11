@@ -2,6 +2,8 @@
   "name": "bbpr",
   "version": "1.4.0",
   "description": "Make pull requests through the Bitbucket API 2.0",
+  "url": "https://github.com/MichelML/bbpr.git",
+  "email": "michmoreau.l@gmail.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
