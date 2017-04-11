@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/bbpr.png'>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/bbpr.png' width='150'>
 <h3 style="text-decordation:none;">Light Speed Pull Requests from Your Terminal</h3>
 </div>
 <br>
