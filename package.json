@@ -2,7 +2,7 @@
   "name": "bbpr",
   "version": "1.3.1",
   "description": "Make pull requests through the Bitbucket API 2.0",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index"
@@ -19,7 +19,7 @@
     "shelljs": "^0.7.7"
   },
   "bin": {
-    "bbpr": "./main.js"
+    "bbpr": "./index.js"
   },
   "devDependencies": {
     "standard": "^10.0.1"

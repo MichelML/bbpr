@@ -1,7 +1,6 @@
-#!/usr/bin/env node
 require('colors')
 const co = require('co')
-const config = require('./bbpr.config.json')
+const config = require('./bbpr.config')
 const crypt = require('./lib/crypt')
 const errors = require('./lib/strings').errors
 const EventEmitter = require('events')
@@ -26,53 +25,29 @@ let pullRequestTitle
 let pullRequestDescription
 let hasRestarted = false
 
-startInfoRetrieval()
-pullRequestInfoEmitter.on('info:redo', () => {
-  hasRestarted = true
-  startInfoRetrieval()
-})
-
-pullRequestInfoEmitter.on('info:complete', () => {
-  console.log(strings.preparingPullRequest.bold)
-  const postRequest = pr.buildPullRequest(
-    pullRequestTitle,
-    pullRequestDescription,
-    destinationBranch,
-    allReviewers,
-    usernameBitBucket,
-    passwordBitBucket
-  )
-
-  console.log(strings.creatingRemoteBranch.bold)
-  shell.exec(
-    `hg push https://${usernameBitBucket}:${passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
-    () => pr.sendPullRequest(postRequest)
-  )
-})
-
-function startInfoRetrieval() {
-  co(function* () {
+function startInfoRetrieval () {
+  co(function * () {
     showInfoRetrievalHeader()
 
-    yield* promptUser()
-    yield* promptPassword()
-    yield* promptDestinationBranch()
-    yield* promptTitle()
-    yield* promptDescription()
-    yield* promptDemo()
-    yield* promptReviewers()
+    yield * promptUser()
+    yield * promptPassword()
+    yield * promptDestinationBranch()
+    yield * promptTitle()
+    yield * promptDescription()
+    yield * promptDemo()
+    yield * promptReviewers()
 
-    yield* isAllInfoCorrect()
+    yield * isAllInfoCorrect()
   })
     .catch(outputError)
 }
 
-function showInfoRetrievalHeader() {
+function showInfoRetrievalHeader () {
   console.log(strings.pullRequestInfoRetrieval.bold)
   console.log('(press ctrl-c to quit at any time)'.gray)
 }
 
-function* promptUser() {
+function * promptUser () {
   usernameBitBucket = config.user.name
   if (usernameBitBucket) {
     console.log(`${promptStrings.bitBucketUserName.green}${usernameBitBucket.bold.underline}`)
@@ -84,7 +59,7 @@ function* promptUser() {
   }
 }
 
-function* promptPassword() {
+function * promptPassword () {
   if (config.user.password === null || !config.user.cachePwd) {
     passwordBitBucket = yield prompt.password(promptStrings.bitBucketPassword.green)
     if (config.user.cachePwd) {
@@ -102,7 +77,7 @@ function* promptPassword() {
   }
 }
 
-function* promptDestinationBranch() {
+function * promptDestinationBranch () {
   destinationBranch = yield prompt(promptStrings.destinationBranch.green)
   destinationBranch = destinationBranch || config.branches.dest.default
   if (!destinationBranch) {
@@ -110,17 +85,17 @@ function* promptDestinationBranch() {
   }
 }
 
-function* promptTitle() {
+function * promptTitle () {
   pullRequestTitle = yield prompt(promptStrings.pullRequestTitle.green)
   pullRequestTitle = pullRequestTitle || ''
 }
 
-function* promptDescription() {
+function * promptDescription () {
   pullRequestDescription = yield prompt.multiline(promptStrings.pullRequestDescription.green)
   pullRequestDescription = pullRequestDescription || ''
 }
 
-function* promptDemo() {
+function * promptDemo () {
   if (config.demo.shouldPrompt) {
     let needADemo = yield prompt.confirm(promptStrings.needADemo.yellow)
     if (needADemo) {
@@ -144,7 +119,7 @@ function* promptDemo() {
   }
 }
 
-function* promptReviewers() {
+function * promptReviewers () {
   if (config.reviewers.potential.length) {
     let needAdditionalReviewers = yield prompt.confirm(promptStrings.needReviewers.yellow)
     if (needAdditionalReviewers) {
@@ -156,7 +131,7 @@ function* promptReviewers() {
   allReviewers = reviewers.getAllReviewers(additionalReviewers, usernameBitBucket)
 }
 
-function* isAllInfoCorrect() {
+function * isAllInfoCorrect () {
   presentInfoReview(destinationBranch, pullRequestTitle, pullRequestDescription, allReviewers, usernameBitBucket)
 
   let isAllInfoCorrect = yield prompt.confirm(promptStrings.isAllInfoCorrect.bold.cyan)
@@ -167,4 +142,30 @@ function* isAllInfoCorrect() {
   } else {
     pullRequestInfoEmitter.emit('info:complete')
   }
+}
+
+module.exports = function startPullRequestProcess () {
+  startInfoRetrieval()
+  pullRequestInfoEmitter.on('info:redo', () => {
+    hasRestarted = true
+    startInfoRetrieval()
+  })
+
+  pullRequestInfoEmitter.on('info:complete', () => {
+    console.log(strings.preparingPullRequest.bold)
+    const postRequest = pr.buildPullRequest(
+      pullRequestTitle,
+      pullRequestDescription,
+      destinationBranch,
+      allReviewers,
+      usernameBitBucket,
+      passwordBitBucket
+    )
+
+    console.log(strings.creatingRemoteBranch.bold)
+    shell.exec(
+      `hg push https://${usernameBitBucket}:${passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
+      () => pr.sendPullRequest(postRequest)
+    )
+  })
 }

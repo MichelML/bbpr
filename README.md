@@ -72,7 +72,10 @@ Default configuration file overview:
         "dest": {
             "default": "default" // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
         }
-    }
+    },
+    "globalVars": {
+        "openFileCommand": "" // String. Your preferred terminal command to open your config file (javascript file). BBPR uses a default command according to your platform if empty.
+    } 
 }
 ```  
 Once this step is done, you are ready to go. You can run `node <path to your local bbpr>/bbpr` from within your local repository for which you want to make a pull request, and a session will start. If you cloned BBPR at the location suggested in the <a href="#installation">install section</a>, simply running `node ../bbpr` should work flawlessly.
