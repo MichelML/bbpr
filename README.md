@@ -1,10 +1,10 @@
 <div align="center">
-<img src='bbpr.png'>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/bbpr.png'>
 <h3 style="text-decordation:none;">Light Speed Pull Requests from Your Terminal</h3>
 </div>
 <br>
 <div align="center">
-<img src='bbpr2.gif'>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/bbpr2.gif'>
 </div>
 
 <h1 id="synopsis">Synopsis</h1>
