@@ -1,14 +1,15 @@
 {
-  "name": "bbpr",
-  "version": "1.6.3",
-  "description": "Make pull requests through the Bitbucket API 2.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+  "author": {
+    "email": "michmoreau.l@gmail.com",
+    "name": "Michel Moreau"
   },
-  "author": "Michel Moreau",
-  "license": "MIT",
+  "bin": {
+    "bbpr": "./index.js"
+  },
+  "bugs": {
+    "email": "michmoreau.l@gmail.com",
+    "url": "https://github.com/MichelML/bbpr/issues"
+  },
   "dependencies": {
     "co": "^4.6.0",
     "co-fs": "^1.2.0",
@@ -16,15 +17,33 @@
     "colors": "^1.1.2",
     "shelljs": "^0.7.7"
   },
-  "bin": {
-    "bbpr": "./index.js"
-  },
+  "description": "Make pull requests through the Bitbucket API 2.0 from your terminal",
   "devDependencies": {
     "standard": "^10.0.1"
   },
-  "bugs": {
-    "url": "https://github.com/MichelML/bbpr/issues",
-    "email": "michmoreau.l@gmail.com"
+  "homepage": "https://github.com/MichelML/bbpr",
+  "keyword": [
+    "bbpr",
+    "bitbucket",
+    "command-line",
+    "configurable",
+    "interactive",
+    "javascript",
+    "mercurial",
+    "nodejs",
+    "prompt",
+    "pull-requests"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "bbpr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichelML/bbpr.git"
   },
-  "homepage": "https://github.com/MichelML/bbpr"
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.6.3"
 }
