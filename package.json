@@ -2,8 +2,6 @@
   "name": "bbpr",
   "version": "1.5.0",
   "description": "Make pull requests through the Bitbucket API 2.0",
-  "url": "https://github.com/MichelML/bbpr.git",
-  "email": "michmoreau.l@gmail.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,8 +14,6 @@
     "co-fs": "^1.2.0",
     "co-prompt": "^1.0.0",
     "colors": "^1.1.2",
-    "open": "0.0.5",
-    "prompt": "^1.0.0",
     "shelljs": "^0.7.7"
   },
   "bin": {
@@ -25,5 +21,10 @@
   },
   "devDependencies": {
     "standard": "^10.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/MichelML/bbpr/issues",
+    "email": "michmoreau.l@gmail.com"
+  },
+  "homepage": "https://github.com/MichelML/bbpr"
 }
