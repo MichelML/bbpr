@@ -30,6 +30,6 @@ module.exports = {
         }
     },
     "globalVars": {
-        "openFileCommand": "" // String. Your preferred terminal command to open a javascript file. BBPR uses a default command according to your platform if empty.
+        "openFileCommand": "" // String. Your preferred terminal command to open your config file (javascript file). BBPR uses a default command according to your platform if empty.
     }
 }
