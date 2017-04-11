@@ -1,6 +1,6 @@
 {
   "name": "bbpr",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Make pull requests through the Bitbucket API 2.0",
   "main": "index.js",
   "scripts": {
