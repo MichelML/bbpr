@@ -9,7 +9,7 @@
 </div>
 
 <h1 id="synopsis">Synopsis</h1>
-BBPR (BitBucket Pull Requests) is an interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. BBPR partners up with you on that journey, so that your future pull requests will always be picture perfect.   
+BBPR (BitBucket Pull Requests) is a cross-platform, interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. BBPR partners up with you on that journey, so that your future pull requests will always be picture perfect.   
 
 <h1 id="synopsis">How it works</h1>
 When you start a BBPR session, you simply answer questions about your upcoming PR so that BBPR can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, BBPR sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
