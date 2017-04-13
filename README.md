@@ -43,14 +43,14 @@ BBPR comes bundled with a configuration file (`bbpr.config.js`) by default. That
 Default configuration file overview:  
 
 ```javascript 
-{
+module.exports = {
     "organization": {
-        "name": "" // String. Add the name of your BitBucket organization (ex: mycompanyid )
+        "name": "" // String. Add the name of your BitBucket username or your organization name under which your repository can be found (ex: michelmoreau, mycompanyid )
         // This will be used to access the proper BitBucket API path => /2.0/repositories/{will_be_utilized_here}/{repo_slug}/pullrequests
-        // See https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests#post
+        // See https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests#post for more info
     },
     "user": {
-        "name": "", // String. Provide your BitBucket username (ex: michelmoreaul) so you don't have to type it at each session.
+        "name": "", // String. Provide your BitBucket username (ex: michelmoreaul) with whic so you don't have to type it at each session.
         "password": null, // null or String.
         // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next BBPR sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property. 
@@ -76,7 +76,7 @@ Default configuration file overview:
     },
     "globalVars": {
         "openFileCommand": "" // String. Your preferred terminal command to open your config file (javascript file). BBPR uses a default command according to your platform if empty.
-    } 
+    }
 }
 ```  
 Once this step is done, you are ready to go. You can run `node <path to your local bbpr>/bbpr` from within your local repository for which you want to make a pull request, and a session will start. If you cloned BBPR at the location suggested in the <a href="#installation">install section</a>, simply running `node ../bbpr` should work flawlessly.

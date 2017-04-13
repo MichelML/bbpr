@@ -4,5 +4,6 @@
         "javascript",
         "javascriptreact",
         "html"
-    ]
+    ],
+    "standard.autoFixOnSave": true
 }

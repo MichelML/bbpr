@@ -10,11 +10,11 @@ module.exports = {
         // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next BBPR sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property.
         // In any other case, you will be prompted at each BBPR session to provide your BitBucket password.
-    'cachePwd': false // Boolean. See the password property for detailed explanation.
+    'cachePwd': true // Boolean. See the password property for detailed explanation.
   },
   'demo': {
-    'shouldPrompt': false, // Boolean. Set to true if you'll need a demo link with your PR.
-    'shouldPromptDescription': false, // Boolean. Set to true if you'll need a description with your demo.
+    'shouldPrompt': true, // Boolean. Set to true if you'll need a demo link with your PR.
+    'shouldPromptDescription': true, // Boolean. Set to true if you'll need a description with your demo.
     'basePath': '' // String. Base path to your demo (ex. hhtps://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
   },
   'reviewers': {

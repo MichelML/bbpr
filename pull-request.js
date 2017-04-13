@@ -124,7 +124,7 @@ function * promptReviewers () {
     let needAdditionalReviewers = yield prompt.confirm(promptStrings.needReviewers.yellow)
     if (needAdditionalReviewers) {
       console.log(promptStrings.additionalReviewers.bold + `${config.reviewers.potential.join('\n')}`)
-      additionalReviewers = yield prompt(promptDescriptions.additionalReviewersSpecifications.green)
+      additionalReviewers = yield prompt(promptStrings.additionalReviewersSpecifications.green)
       additionalReviewers = reviewers.retrieveAddedReviewers(additionalReviewers)
     }
   }
