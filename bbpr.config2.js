@@ -23,7 +23,7 @@ module.exports = {
   },
   'branches': {
     'source': {
-      'close': true // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who may be assigned to reviewing your work. An empty Array is also valid.
+      'close': false // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who may be assigned to reviewing your work. An empty Array is also valid.
     },
     'dest': {
       'default': 'default' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
