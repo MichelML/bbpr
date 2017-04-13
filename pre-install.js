@@ -1,2 +1,2 @@
 #!/ usr/bin/env node
-require('shelljs').exec('shaksjdhfl ./pre-install.sh')
+require('shelljs').exec('sh ./pre-install.sh')
