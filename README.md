@@ -1,11 +1,11 @@
 <br>
 <div align="center">
-<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/bbpr.png' width='150'>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
 <h3 style="text-decordation:none;">Light Speed Pull Requests from Your Terminal</h3>
 </div>
 <br>
 <div align="center">
-<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/bbpr2.gif'>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.gif'>
 </div>
 
 <h1 id="synopsis">Synopsis</h1>
@@ -60,7 +60,7 @@ module.exports = {
     "demo": {
         "shouldPrompt": false, // Boolean. Set to true if you'll need a demo link with your PR.
         "shouldPromptDescription": false, // Boolean. Set to true if you'll need a description with your demo.
-        "basePath": "" // String. Base path to your demo (ex. hhtps://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+        "basePath": "" // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
     },
     "reviewers": {
         "default": [], // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who are assign to reviewing your work. An empty Array is also valid. 
