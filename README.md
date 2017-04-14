@@ -60,7 +60,7 @@ module.exports = {
   demo: {
     shouldPrompt: false, // Boolean. Set to true if you'll need a demo link with your PR.
     shouldPromptDescription: false, // Boolean. Set to true if you'll need a description with your demo.
-    basePath: '' // String. Base path to your demo (ex. hhtps://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+    basePath: '' // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
   },
   reviewers: {
     default: [], // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who are assign to reviewing your work. An empty Array is also valid.
