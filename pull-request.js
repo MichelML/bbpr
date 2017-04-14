@@ -33,7 +33,7 @@ function showInfoRetrievalHeader () {
 module.exports = function startPullRequestProcess () {
   startInfoRetrieval()
   prompt.pullRequestInfoEmitter.on('info:redo', () => {
-    hasRestarted = true
+    prompt.info.hasRestarted = true
     startInfoRetrieval()
   })
 
