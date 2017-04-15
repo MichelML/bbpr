@@ -8,10 +8,12 @@
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.gif'>
 </div>
 
-<h1 id="synopsis">Synopsis</h1> 
+<h1 id="synopsis">Synopsis</h1>  
+
 _bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. _bbpr_ partners up with you on that journey, so that your future pull requests will always be picture perfect.   
 
-<h1 id="synopsis">How it works</h1>
+<h1 id="synopsis">How it works</h1>  
+
 When you start a _bbpr_ session, you simply answer questions about your upcoming PR so that _bbpr_ can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, _bbpr_ sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
  
 <h1 id="installation">Installation</h1>
@@ -50,9 +52,9 @@ module.exports = {
   user: {
     name: '', // String. Provide your BitBucket username (ex: michelmoreaul) under which you will make your pull requests, so you don't have to type it at each session.
     password: null, // null or String.
-        // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next _bbpr_ sessions.
+        // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next bbpr sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property.
-        // In any other case, you will be prompted at each _bbpr_ session to provide your BitBucket password.
+        // In any other case, you will be prompted at each bbpr session to provide your BitBucket password.
     cachePwd: false // Boolean. See the password property for detailed explanation.
   },
   demo: {
@@ -73,7 +75,7 @@ module.exports = {
     }
   },
   globalVars: {
-    openFileCommand: '' // String. Your preferred terminal command to open your config file (javascript file). _bbpr_ uses a default command according to your platform if empty.
+    openFileCommand: '' // String. Your preferred terminal command to open your config file (javascript file). bbpr uses a default command according to your platform if empty.
   }
 }
 ```  
