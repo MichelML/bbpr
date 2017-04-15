@@ -5,7 +5,7 @@ module.exports = {
         // For more information see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests#post
   },
   user: {
-    name: '', // String. Provide your BitBucket username (ex: michelmoreaul) with whic so you don't have to type it at each session.
+    name: '', // String. Provide your BitBucket username (ex: michelmoreaul) under which you will make your pull requests, so you don't have to type it at each session.
     password: null, // null or String.
         // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next BBPR sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property.
@@ -15,7 +15,7 @@ module.exports = {
   demo: {
     shouldPrompt: false, // Boolean. Set to true if you'll need a demo link with your PR.
     shouldPromptDescription: false, // Boolean. Set to true if you'll need a description with your demo.
-    basePath: '' // String. Base path to your demo (ex. hhtps://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+    basePath: '' // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
   },
   reviewers: {
     default: [], // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who are assign to reviewing your work. An empty Array is also valid.
@@ -23,7 +23,7 @@ module.exports = {
   },
   branches: {
     source: {
-      close: true // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who may be assigned to reviewing your work. An empty Array is also valid.
+      close: true // Boolean. Set to false if you do not want your source branch to be closed after merging in the destination branch.
     },
     dest: {
       default: 'default' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
