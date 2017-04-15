@@ -9,10 +9,10 @@
 </div>
 
 <h1 id="synopsis">Synopsis</h1> 
-*bbpr* (BitBucket Pull Requests) is a cross-platform, interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. *bbpr* partners up with you on that journey, so that your future pull requests will always be picture perfect.   
+_bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. _bbpr_ partners up with you on that journey, so that your future pull requests will always be picture perfect.   
 
 <h1 id="synopsis">How it works</h1>
-When you start a *bbpr* session, you simply answer questions about your upcoming PR so that *bbpr* can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, *bbpr* sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
+When you start a _bbpr_ session, you simply answer questions about your upcoming PR so that _bbpr_ can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, _bbpr_ sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
  
 <h1 id="installation">Installation</h1>
 <h3>Step 1: Prerequisites</h3> 
@@ -22,21 +22,21 @@ First, make sure you have the following installed on your computer: <a href="htt
 
 <h3>Step 2: Npm Install</h3>
   
-The very best way to use the latest version of *bbpr* is to install it as a global npm package.
+The very best way to use the latest version of _bbpr_ is to install it as a global npm package.
 ```  
 npm install -g bbpr
 ```     
 
-Congratulations, *bbpr* is now installed properly and you can instantly use the `bbpr` terminal command from any local Mercurial repository linked to a remote BitBucket repository. However, a more useful way to use *bbpr* is to configure it to your personal profile and taste.
+Congratulations, _bbpr_ is now installed properly and you can instantly use the `bbpr` terminal command from any local Mercurial repository linked to a remote BitBucket repository. However, a more useful way to use _bbpr_ is to configure it to your personal profile and taste.
 
 <h1 id="Configuration">Use and Configuration</h1>  
 
-*bbpr* comes bundled with a configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your *bbpr* configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
+_bbpr_ comes bundled with a configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your _bbpr_ configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
 
 `bbpr --c` - opens your configuration file so you can edit it manually.
 `bbpr --c reset` - resets your configuration file to the default configuration file
 `bbpr --c <path to a local config js file>` - replaces your current config file with the local config file specified
-`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified **NOT YET SUPPORTED**
+`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified __NOT YET SUPPORTED__
   
 Default configuration file overview:  
 
@@ -50,9 +50,9 @@ module.exports = {
   user: {
     name: '', // String. Provide your BitBucket username (ex: michelmoreaul) under which you will make your pull requests, so you don't have to type it at each session.
     password: null, // null or String.
-        // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next *bbpr* sessions.
+        // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next _bbpr_ sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property.
-        // In any other case, you will be prompted at each *bbpr* session to provide your BitBucket password.
+        // In any other case, you will be prompted at each _bbpr_ session to provide your BitBucket password.
     cachePwd: false // Boolean. See the password property for detailed explanation.
   },
   demo: {
@@ -73,18 +73,18 @@ module.exports = {
     }
   },
   globalVars: {
-    openFileCommand: '' // String. Your preferred terminal command to open your config file (javascript file). *bbpr* uses a default command according to your platform if empty.
+    openFileCommand: '' // String. Your preferred terminal command to open your config file (javascript file). _bbpr_ uses a default command according to your platform if empty.
   }
 }
 ```  
-Once you configured *bbpr* to your taste, you are ready to go. You can run `bbpr` from any local repository for which you want to make a pull request, and a session will start.  
+Once you configured _bbpr_ to your taste, you are ready to go. You can run `bbpr` from any local repository for which you want to make a pull request, and a session will start.
 
-That's it, may you and your teammates enjoy the *bbpr* way of doing BitBucket pull requests!
+That's it, may you and your teammates enjoy the _bbpr_ way of doing BitBucket pull requests!
   
 <h1 id="contribute">Contribute</h1>
 
-Please do not hesitate to make any change at any time to *bbpr* by submitting a pull request.
+Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request.
   
 <h1 id="maintainer">Maintainer</h1>
  
-Michel Moreau - [michmoreau.l@gmail.com](mailto:michmoreau.l@gmail.com?Subject=*bbpr*%20Project) 
+Michel Moreau - [michmoreau.l@gmail.com](mailto:michmoreau.l@gmail.com?Subject=bbpr%20Project) 
