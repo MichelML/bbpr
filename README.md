@@ -34,11 +34,15 @@ Congratulations, _bbpr_ is now installed properly and you can instantly use the 
 <h1 id="Configuration">Use and Configuration</h1>  
 
 _bbpr_ comes bundled with a configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your _bbpr_ configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
-
-`bbpr --c` - opens your configuration file so you can edit it manually.
-`bbpr --c reset` - resets your configuration file to the default configuration file
-`bbpr --c <path to a local config js file>` - replaces your current config file with the local config file specified
-`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified __NOT YET SUPPORTED__
+  
+`bbpr --c` - opens your configuration file so you can edit it manually.  
+  
+`bbpr --c reset` - resets your configuration file to the default configuration file.  
+  
+`bbpr --c <path to a local config js file>` - replaces your current config file with the local config file specified.  
+  
+`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified. __NOT YET SUPPORTED__  
+  
   
 Default configuration file overview:  
 
