@@ -45,6 +45,7 @@ module.exports = function startPullRequestProcess () {
       prompt.info.pullRequestDescription,
       prompt.info.destinationBranch,
       prompt.info.allReviewers,
+      prompt.info.usernameBitBucketAPI,
       prompt.info.usernameBitBucket,
       prompt.info.passwordBitBucket
     )
