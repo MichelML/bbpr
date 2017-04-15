@@ -12,6 +12,7 @@ function startInfoRetrieval () {
   co(function * () {
     showInfoRetrievalHeader()
 
+    yield * prompt.promptUserAPI()
     yield * prompt.promptUser()
     yield * prompt.promptPassword()
     yield * prompt.promptDestinationBranch()
