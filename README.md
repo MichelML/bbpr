@@ -24,7 +24,7 @@ First, make sure you have the following installed on your computer: <a href="htt
 
 <h3>Step 2: Npm Install</h3>
   
-The very best way to use the latest version of _bbpr_ is to install it as a global npm package.
+The very best way to use the latest version of _bbpr_ is to install it globally on your computer:
 ```  
 npm install -g bbpr
 ```     
