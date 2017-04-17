@@ -1,6 +1,6 @@
 require('colors')
 const co = require('co')
-const config = require('./bbpr.config')
+const config = require('./lib/get-config')
 const hg = require('./lib/hg')
 const outputError = require('./lib/output-error')
 const pr = require('./lib/pr')
