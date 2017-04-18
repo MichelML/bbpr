@@ -8,6 +8,8 @@ const prompt = require('./lib/prompt')
 const shell = require('shelljs')
 const strings = require('./lib/strings')
 
+hg.handleErrorsOnNonExistingHgRepository()
+
 function startInfoRetrieval () {
   co(function * () {
     showInfoRetrievalHeader()
