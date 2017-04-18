@@ -38,10 +38,12 @@ _bbpr_ comes bundled with a configuration file (`bbpr.config.js`) by default. Th
 `bbpr --c` - opens your configuration file so you can edit it manually.  
   
 `bbpr --c reset` - resets your configuration file to the default configuration file.  
+
+`bbpr --c allTrue` - fill your configuration file with valid and positive values for each config property.  
   
 `bbpr --c <path to a local config js file>` - replaces your current config file with the local config file specified.  
   
-`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified. __NOT YET SUPPORTED__  
+`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified.  
   
   
 Default configuration file overview:  
