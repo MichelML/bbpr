@@ -48,5 +48,5 @@
     "postinstall": "node ./install/post-install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "2.1.2"
+  "version": "2.1.3"
 }
