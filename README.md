@@ -48,13 +48,7 @@ Default configuration file overview:
 
 ```javascript 
 module.exports = {
-  organization: {
-    name: '' // String. Add the name of your BitBucket username or your organization name under which your repository can be found (ex: michelmoreau, mycompanyid )
-        // This will be used to access the proper BitBucket API path => https://api.bitbucket.org/2.0/repositories/2.0/repositories/{will_be_utilized_here}/{repo_slug}/pullrequests
-        // For more information see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests#post
-  },
   user: {
-    name: '', // String. Provide your BitBucket username (ex: michelmoreaul) under which you will make your pull requests, so you don't have to type it at each session.
     password: null, // null or String.
         // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next bbpr sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property.
