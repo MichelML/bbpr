@@ -1,3 +1,4 @@
+<strong>This project is in active development and several improvements are to be expected in the next weeks/months. </strong>
 <br>
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
@@ -85,7 +86,11 @@ That's it, may you and your teammates enjoy the _bbpr_ way of doing BitBucket pu
   
 <h1 id="contribute">Contribute</h1>
 
-Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request.
+Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request.  
+  
+  <h2 id="contribute-roadmap">Roadmap</h2>
+  
+  _Coming in the next few days_
   
 <h1 id="maintainer">Maintainer</h1>
  
