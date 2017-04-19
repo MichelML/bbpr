@@ -1,5 +1,7 @@
 <strong>*** Please note that this project is in active development and several improvements are to be expected in the next weeks/months. *** </strong>
 <br>
+<strong>*** Support this project by giving it a star on GitHub. *** </strong>
+<br>
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
 <h3 style="text-decordation:none;">Light Speed Pull Requests from Your Terminal</h3>
