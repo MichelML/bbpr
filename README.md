@@ -1,4 +1,4 @@
-<strong>This project is in active development and several improvements are to be expected in the next weeks/months. </strong>
+<strong>*** Please note that this project is in active development and several improvements are to be expected in the next weeks/months. *** </strong>
 <br>
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
