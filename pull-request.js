@@ -13,7 +13,7 @@ hg.handleErrorsOnNonExistingHgRepository()
 function startInfoRetrieval () {
   co(function * () {
     showInfoRetrievalHeader()
-    for (let promptQuestion of prompt.prompts) { yield * promptQuestion() }
+    for (let promptStep of prompt.promptSteps) { yield * promptStep() }
   })
     .catch(outputError)
 }
