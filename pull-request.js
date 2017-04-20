@@ -13,17 +13,7 @@ hg.handleErrorsOnNonExistingHgRepository()
 function startInfoRetrieval () {
   co(function * () {
     showInfoRetrievalHeader()
-
-    yield * prompt.promptUserAPI()
-    yield * prompt.promptUser()
-    yield * prompt.promptPassword()
-    yield * prompt.promptDestinationBranch()
-    yield * prompt.promptTitle()
-    yield * prompt.promptDescription()
-    yield * prompt.promptDemo()
-    yield * prompt.promptReviewers()
-
-    yield * prompt.promptIsAllInfoCorrect()
+    for (let promptQuestion of prompt.prompts) { yield * promptQuestion() }
   })
     .catch(outputError)
 }
@@ -41,21 +31,11 @@ module.exports = function startPullRequestProcess () {
   })
 
   prompt.pullRequestInfoEmitter.on('info:complete', () => {
-    console.log(strings.preparingPullRequest.bold)
-    const postRequest = pr.buildPullRequest(
-      prompt.info.pullRequestTitle,
-      prompt.info.pullRequestDescription,
-      prompt.info.destinationBranch,
-      prompt.info.allReviewers,
-      prompt.info.usernameBitBucketAPI,
-      prompt.info.usernameBitBucket,
-      prompt.info.passwordBitBucket
-    )
+    console.log(strings.preparingPullRequest.yellow.bold)
+    const postRequest = pr.buildPullRequest(prompt.info)
 
     console.log(strings.creatingRemoteBranch.bold)
-    shell.exec(
-      `hg push https://${prompt.info.usernameBitBucket}:${prompt.info.passwordBitBucket}@bitbucket.org/${config.organization.name}/${hg.getRepositoryName()} --new-branch -b ${hg.getCurrentBranchName()}`,
-      () => pr.sendPullRequest(postRequest)
-    )
+    hg.createRemoteBranch(prompt.info)
+    pr.sendPullRequest(postRequest)
   })
 }
