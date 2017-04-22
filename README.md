@@ -1,7 +1,6 @@
 <strong>Please note that this project is in active development and several improvements are to be expected in the next weeks/months.</strong>
 <br>
 <br>
-<strong>Support this project by giving it a star on GitHub.</strong>
 <br>
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
@@ -23,7 +22,7 @@ When you start a _bbpr_ session, you simply answer questions about your upcoming
 <h1 id="installation">Installation</h1>
 <h3>Step 1: Prerequisites</h3> 
   
-First, make sure you have the following installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, <a href="https://git-scm.com/">git</a>, and <a href="https://www.mercurial-scm.org/">mercurial</a>.   
+First, make sure you have the following installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a> or <a href="https://www.mercurial-scm.org/">mercurial</a> depending on which version control system your team is using.   
 
 
 <h3>Step 2: Npm Install</h3>
@@ -87,13 +86,22 @@ Once you configured _bbpr_ to your taste, you are ready to go. You can run `bbpr
 
 That's it, may you and your teammates enjoy the _bbpr_ way of doing BitBucket pull requests!
   
-<h1 id="contribute">Contribute</h1>
+<h1 id="contribute">How to contribute</h1>
 
-Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request.  
+Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request, an issue, or any suggestion for improvements you might have.  
   
   <h2 id="contribute-roadmap">Roadmap</h2>
-  
-  _Coming in the next few days_
+  - eliminate the need to provide organization name and username - DONE
+  - allow configuration file to be set from a remote or local file - DONE
+  - better error messages on failed pull request - DONE
+  - allow git repositories to be handled - DONE
+  - rethink demo link options 
+  - improved readme with more information, code examples, and cross-platform compatibility
+  - allow users to have local bbpr.config.js file for their repositories
+  - reduce shelljs and bash dependency for before module install and after module install
+  - unit tests everything
+  - allow teams to make PR updates through bbpr
+  - check if destination branch exists remotely before making pull request
   
 <h1 id="maintainer">Maintainer</h1>
  
