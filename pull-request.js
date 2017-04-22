@@ -1,14 +1,12 @@
 require('colors')
 const co = require('co')
-const config = require('./lib/normalize-config')
-const hg = require('./lib/hg')
+const vcs = require('./lib/vcs')
 const outputError = require('./lib/output-error')
 const pr = require('./lib/pr')
 const prompt = require('./lib/prompt')
-const shell = require('shelljs')
 const strings = require('./lib/strings')
 
-hg.handleErrorsOnNonExistingHgRepository()
+vcs.handleErrorsOnNonExistingVCSRepository()
 
 function startInfoRetrieval () {
   co(function * () {
@@ -35,7 +33,7 @@ module.exports = function startPullRequestProcess () {
     const postRequest = pr.buildPullRequest(prompt.info)
 
     console.log(strings.creatingRemoteBranch.bold)
-    hg.createRemoteBranch(prompt.info)
+    vcs.createRemoteBranch(prompt.info)
     pr.sendPullRequest(postRequest)
   })
 }
