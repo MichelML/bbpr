@@ -21,7 +21,7 @@ module.exports = {
 
     },
     dest: {
-      default: 'default' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
+      default: '' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often. Defaults to default for Mercurial and master for Git.
     }
   },
   globalVars: {

@@ -56,9 +56,9 @@ Default configuration file overview:
 module.exports = {
   user: {
     password: null, // null or String.
-        // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next bbpr sessions.
+        // If null and cachePwd is set to true, this property will be set to the (encrypted) password you entered via the prompt for your next BBPR sessions.
         // If not null and cachePwd is set to true, it will use the encrypted password stored in this property.
-        // In any other case, you will be prompted at each bbpr session to provide your BitBucket password.
+        // In any other case, you will be prompted at each BBPR session to provide your BitBucket password.
     cachePwd: false // Boolean. See the password property for detailed explanation.
   },
   demo: {
@@ -75,11 +75,11 @@ module.exports = {
       close: true // Boolean. Set to false if you do not want your source branch to be closed after merging in the destination branch.
     },
     dest: {
-      default: 'default' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
+      default: '' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often. Defaults to default for Mercurial and master for Git
     }
   },
   globalVars: {
-    openFileCommand: '' // String. Your preferred terminal command to open your config file (javascript file). bbpr uses a default command according to your platform if empty.
+    openFileCommand: '' // String. Your preferred terminal command to open your config file (javascript file). BBPR uses a default command according to your platform if empty.
   }
 }
 ```  

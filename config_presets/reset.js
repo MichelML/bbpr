@@ -20,7 +20,7 @@ module.exports = {
       close: true // Boolean. Set to false if you do not want your source branch to be closed after merging in the destination branch.
     },
     dest: {
-      default: 'default' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often.
+      default: '' // String. Set to your main branch (ex: master or default), or the branch to which you are making PRs most often. Defaults to default for Mercurial and master for Git
     }
   },
   globalVars: {
