@@ -91,18 +91,18 @@ That's it, may you and your teammates enjoy the _bbpr_ way of doing BitBucket pu
 Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request, an issue, or any suggestion for improvements you might have.  
   
   <h2 id="contribute-roadmap">Roadmap</h2>
-  - eliminate the need to provide organization name and username - DONE
-  - allow configuration file to be set from a remote or local file - DONE
-  - better error messages on failed pull request - DONE
-  - allow git repositories to be handled - DONE
-  - rethink demo link options 
-  - improved readme with more information, code examples, and cross-platform compatibility
-  - allow users to have local bbpr.config.js file for their repositories
-  - reduce shelljs and bash dependency for before module install and after module install
-  - unit tests everything
-  - allow teams to make PR updates through bbpr
-  - check if destination branch exists remotely before making pull request
-  
+  - eliminate the need to provide organization name and username - DONE  
+  - allow configuration file to be set from a remote or local file - DONE  
+  - better error messages on failed pull request - DONE  
+  - allow git repositories to be handled - DONE  
+  - rethink demo link options   
+  - improved readme with more information, code examples, and cross-platform compatibility  
+  - allow users to have local bbpr.config.js file for their repositories  
+  - reduce shelljs and bash dependency for before module install and after module install  
+  - unit tests everything  
+  - allow teams to make PR updates through bbpr  
+  - check if destination branch exists remotely before making pull request  
+    
 <h1 id="maintainer">Maintainer</h1>
  
 Michel Moreau - [michmoreau.l@gmail.com](mailto:michmoreau.l@gmail.com?Subject=bbpr%20Project) 
