@@ -90,7 +90,8 @@ That's it, may you and your teammates enjoy the _bbpr_ way of doing BitBucket pu
 
 Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request, an issue, or any suggestion for improvements you might have.  
   
-  <h2 id="contribute-roadmap">Roadmap</h2>
+  <h2 id="contribute-roadmap">Roadmap</h2>  
+    
   - eliminate the need to provide organization name and username - DONE  
   - allow configuration file to be set from a remote or local file - DONE  
   - better error messages on failed pull request - DONE  
