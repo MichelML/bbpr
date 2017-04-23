@@ -36,18 +36,19 @@ Congratulations, _bbpr_ is now installed properly and you can instantly use the 
 
 <h1 id="Configuration">Use and Configuration</h1>  
 
-_bbpr_ comes bundled with a configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your _bbpr_ configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
+_bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your global _bbpr_ configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
   
-`bbpr --c` - opens your configuration file so you can edit it manually.  
+`bbpr --c` - opens your global configuration file so you can edit it manually.  
   
-`bbpr --c reset` - resets your configuration file to the default configuration file.  
+`bbpr --c reset` - resets your global configuration file to the default configuration file.  
 
-`bbpr --c allTrue` - fill your configuration file with valid and positive values for each config property.  
+`bbpr --c allTrue` - fill your global configuration file with valid and positive values for each config property.  
   
-`bbpr --c <path to a local config js file>` - replaces your current config file with the local config file specified.  
+`bbpr --c <path to a local config js file>` - replaces your current global config file with the local config file specified.  
   
-`bbpr --c <path to a remote (http/https) config js file>` - replaces your current config file with the remote config file specified.  
+`bbpr --c <path to a remote (http/https) config js file>` - replaces your current global config file with the remote config file specified.  
   
+__bbpr now also supports local configuration for each of your bitbucket repositories. To use this feature, simply add a valid bbpr.config.js configuration file at the root level of your repository.__  
   
 Default configuration file overview:  
 
@@ -92,15 +93,16 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   
   <h2 id="contribute-roadmap">Roadmap</h2>  
     
-  - eliminate the need to provide organization name and username - DONE  
-  - allow configuration file to be set from a remote or local file - DONE  
-  - better error messages on failed pull request - DONE  
-  - allow git repositories to be handled - DONE  
+  - eliminate the need to provide organization name and username - __DONE__  
+  - allow configuration file to be set from a remote or local file - __DONE__  
+  - better error messages on failed pull request - __DONE__  
+  - allow git repositories to be handled - __DONE__  
+  - better commandline options for configuration
   - rethink demo link options   
   - improved readme with more information, code examples, and cross-platform compatibility  
-  - allow users to have local bbpr.config.js file for their repositories  
+  - allow users to have local bbpr.config.js file for their repositories - __DONE__ 
   - reduce shelljs and bash dependency for before module install and after module install  
-  - unit tests everything  
+  - unit tests everything - __IN PROGRESS__
   - allow teams to make PR updates through bbpr  
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
