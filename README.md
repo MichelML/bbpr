@@ -103,6 +103,7 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   - unit tests everything  
   - allow teams to make PR updates through bbpr  
   - check if destination branch exists remotely before making pull request  
+  - improve normalization of configuration file  
     
 <h1 id="maintainer">Maintainer</h1>
  
