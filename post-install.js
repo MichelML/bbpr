@@ -1,6 +1,6 @@
 #!/ usr/bin/env node
 const fs = require('fs')
 
-if (fs.existsSync(`${__dirname}/../bbpr.backup.config.js`)) {
-  fs.writeFileSync(`${__dirname}/bbpr.config.js`, fs.readFileSync(`${__dirname}/../bbpr.backup.config.js`, 'utf-8'))
+if (fs.existsSync(`../bbpr.backup.config.js`)) {
+  fs.createReadStream(`../bbpr.backup.config.js`).pipe(fs.createWriteStream('./bbpr.config.js'))
 }
