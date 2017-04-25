@@ -1,5 +1,6 @@
 #!/ usr/bin/env node
 const fs = require('fs')
-const backupConfig = require('./pre-install')
 
-if (backupConfig) fs.writeFileSync(`${__dirname}/bbpr.config.js`, backupConfig)
+if (fs.existsSync(`${__dirname}/../bbpr.backup.config.js`)) {
+  fs.writeFileSync(`${__dirname}/bbpr.config.js`, fs.readFileSync(`${__dirname}/../bbpr.backup.config.js`, 'utf-8'))
+}
