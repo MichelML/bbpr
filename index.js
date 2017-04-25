@@ -2,15 +2,15 @@
 const terminalOptions = require('./lib/terminal-options')
 const configFile = require('./lib/config-file')
 
-if (terminalOptions.hasConfigFlag() && terminalOptions.isResetConfigRequested()) {
+if (terminalOptions.getConfigFlag() && terminalOptions.isResetConfigRequested()) {
   configFile.resetConfig()
-} else if (terminalOptions.hasConfigFlag() && terminalOptions.isAllTrueConfigRequested()) {
+} else if (terminalOptions.getConfigFlag() && terminalOptions.isAllTrueConfigRequested()) {
   configFile.setAllTrueConfig()
-} else if (terminalOptions.hasConfigFlag() && terminalOptions.isTailoredConfigRequested() && terminalOptions.isRemoteConfigRequested()) {
+} else if (terminalOptions.getConfigFlag() && terminalOptions.isTailoredConfigRequested() && terminalOptions.isRemoteConfigRequested()) {
   configFile.setRemoteConfig(terminalOptions.getTailoredConfigFilePath())
-} else if (terminalOptions.hasConfigFlag() && terminalOptions.isTailoredConfigRequested()) {
+} else if (terminalOptions.getConfigFlag() && terminalOptions.isTailoredConfigRequested()) {
   configFile.setTailoredConfig(terminalOptions.getTailoredConfigFilePath())
-} else if (terminalOptions.hasConfigFlag()) {
+} else if (terminalOptions.getConfigFlag()) {
   configFile.openConfig()
 } else {
   require('./pull-request')()

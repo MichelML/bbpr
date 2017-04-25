@@ -97,15 +97,17 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   - allow configuration file to be set from a remote or local file - __DONE__  
   - better error messages on failed pull request - __DONE__  
   - allow git repositories to be handled - __DONE__  
-  - better commandline options for configuration
+  - better commandline options for configuration (local and global) __DONE__
   - rethink demo link options   
   - improved readme with more information, code examples, and cross-platform compatibility  
   - allow users to have local bbpr.config.js file for their repositories - __DONE__ 
-  - reduce shelljs and bash dependency for before module install and after module install  
+  - reduce shelljs and bash dependency for before module install and after module install __DONE__
+  - eliminate bash dependency for password caching __DONE__
   - unit tests everything - __IN PROGRESS__
-  - allow teams to make PR updates through bbpr  
+  - allow PR updates through bbpr more explicitly 
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
+  - allow local and global password caching (only global supported currently)
     
 <h1 id="maintainer">Maintainer</h1>
  
