@@ -1,11 +1,5 @@
-// #!/ usr/bin/env node
-// const fs = require('fs')
+#!/ usr/bin/env node
+const fs = require('fs')
+const backupConfig = require('./pre-install')
 
-// fs.stat('../bbpr.config.backup.js', rewriteConfigBackup)
-
-// function rewriteConfigBackup (error) {
-//   if (!error) {
-//     fs.writeFileSync('bbpr.config.js', fs.readFileSync('../bbpr.config.backup.js', 'utf-8'))
-//     fs.unlinkSync('../bbpr.config.backup.js')
-//   }
-// }
+if (backupConfig) fs.writeFileSync('bbpr.config.js', backupConfig)
