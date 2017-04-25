@@ -1,2 +1,10 @@
 #!/ usr/bin/env node
-require('shelljs').exec('sh ./install/pre-install.sh')
+const fs = require('fs')
+
+fs.stat('bbpr.config.js', makeConfigBackup)
+
+function makeConfigBackup (error) {
+  if (!error) {
+    fs.writeFileSync('config.backup.js', fs.readFileSync('bbpr.config.js', 'utf-8'))
+  }
+}
