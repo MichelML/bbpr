@@ -1,7 +1,7 @@
 #!/ usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const srcPath = path.join(__dirname, '/bbpr.backup.config.js')
+const srcPath = path.join(__dirname, '..', '/bbpr.backup.config.js')
 const destPath = path.join(__dirname, '/bbpr.config.js')
 
 if (fs.existsSync(srcPath)) {

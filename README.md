@@ -107,7 +107,8 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   - allow configuration file to be set from a remote or local file - __DONE__  
   - better error messages on failed pull request - __DONE__  
   - allow git repositories to be handled - __DONE__  
-  - better commandline options for configuration (local and global) __DONE__
+  - better commandline options for configuration (local and global) <strong style='color:red;'>BROKEN</strong>  
+  - fix pre-install and post-install script to preserve global config file of users  <strong style='color:red;'>BROKEN</strong>  
   - rethink demo link options   
   - improved readme with more information, code examples, and cross-platform compatibility  
   - allow users to have local bbpr.config.js file for their repositories - __DONE__ 
