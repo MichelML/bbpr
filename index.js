@@ -12,6 +12,8 @@ if (terminalOptions.getConfigFlag() && terminalOptions.isResetConfigRequested())
   configFile.setTailoredConfig(terminalOptions.getTailoredConfigFilePath())
 } else if (terminalOptions.getConfigFlag()) {
   configFile.openConfig()
+} else if (terminalOptions.getInitFlag()) {
+  configFile.initializeLocalConfig()
 } else {
   require('./pull-request')()
 }
