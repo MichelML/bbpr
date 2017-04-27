@@ -3,7 +3,7 @@
 <br>
 <br>
 <div align="center">
-<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.png' width='150'>
 <h3>Light Speed Pull Requests from Your Terminal</h3>
 </div>
 <br>
