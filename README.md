@@ -1,10 +1,10 @@
 <strong>Please note that this project is in active development and several improvements are to be expected in the next weeks/months.</strong>
 <br>
-<br>
-<br>
 <div align="center">
+<br>
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.png' width='300'>
-<h3>Light Speed Pull Requests from Your Terminal</h3>
+<h3><i>bbpr</i></h3>
+<h4>Light Speed Pull Requests from Your Terminal</h4>
 </div>
 <br>
 <div align="center">
