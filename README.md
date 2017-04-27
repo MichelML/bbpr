@@ -48,8 +48,10 @@ _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by defa
   
 `bbpr --cg <path to a remote (http/https) config js file>` - replaces your current global config file with the remote config file specified.  
   
+`bbpr --init` - initialize a bbpr.config.js file in your local directory.  
+ 
 `bbpr --cl` - opens your local configuration file so you can edit it manually.  
-  
+   
 `bbpr --cl reset` - resets your local configuration file to the default configuration file.  
 
 `bbpr --cl allTrue` - fill your local configuration file with valid and positive values for each config property.  
@@ -104,6 +106,7 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   <h2 id="contribute-roadmap">Roadmap</h2>  
     
   - eliminate the need to provide organization name and username - __DONE__  
+  - add local bbpr.config.js file initialization terminal option - __DONE__  
   - allow configuration file to be set from a remote or local file - __DONE__  
   - better error messages on failed pull request - __DONE__  
   - allow git repositories to be handled - __DONE__  
