@@ -2,8 +2,7 @@
 <br>
 <div align="center">
 <br>
-<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.png' width='300'>
-<h3><i>bbpr</i></h3>
+<img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
 <h4>Light Speed Pull Requests from Your Terminal</h4>
 </div>
 <br>
