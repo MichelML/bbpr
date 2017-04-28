@@ -120,7 +120,7 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   - allow PR updates through bbpr more explicitly 
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
-  - allow local and global password caching (only global supported currently)
+  - improve password caching procedure
     
 <h1 id="maintainer">Maintainer</h1>
  
