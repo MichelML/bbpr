@@ -32,21 +32,55 @@ npm install -g bbpr
 then you can use the `bbpr`command from your terminal. But, read along, there is more.  
 
 <h1 id="Configuration">Use and Configuration</h1>  
-  
-<h3>Usage</h3>  
+
+<h3>Usage</h3>
 _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default, which means you can use it right after installing the module globally on your computer. _bbpr_ also leaves you with a series of commandline options in order to configure the program to your taste:  
    
-| Command                                 | Description                                                                                                                                                                                                                                                                                 |
-|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `bbpr`                                  | Starts the interactive pull request process.         bbpr first looks locally for a configuration file,    and defaults to the global configuration file if it does not find one.         Note that cached passwords are however always retrieved from     the global configuration file.   |
-| `bbpr init`                             | Initializes a local bbpr configuration file for your repository.                                                                                                                                                                                                                            |
-| `bbpr -l`                               | Opens your local bbpr configuration file.                                                                                                                                                                                                                                                   |
-| `bbpr -l reset`                         | Resets your local bbpr configuration file to the default configuration.                                                                                                                                                                                                                     |
-| `bbpr -l <path to configuration file>`  | Sets your local bbpr configuration file to the file specified.    The specified path can be relative, absolute, or remote (http/https).                                                                                                                                                     |
-| `bbpr -g`                               | Initializes a global bbpr configuration file for your repository.                                                                                                                                                                                                                           |
-| `bbpr -g reset`                         | Resets your global bbpr configuration file to the default configuration.                                                                                                                                                                                                                    |
-| `bbpr -g  <path to configuration file>` | Sets your global bbpr configuration file to the file specified.    The specified path can be relative, absolute, or remote (http/https).                                                                                                                                                    |  
   
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l">Command</th>
+    <th class="tg-yw4l">Description</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr`</td>
+    <td class="tg-yw4l">Starts the interactive pull request process.    <br>   <br>bbpr first looks locally for a configuration file,   <br>and defaults to the global configuration file if it does not find one.    <br>   <br>Note that cached passwords are however always retrieved from    <br>the global configuration file.  </td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr init`</td>
+    <td class="tg-yw4l">Initializes a local bbpr configuration file for your repository.</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr -l`</td>
+    <td class="tg-yw4l">Opens your local bbpr configuration file.</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr -l reset`</td>
+    <td class="tg-yw4l">Resets your local bbpr configuration file to the default configuration.</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr -l &lt;path to configuration file&gt;`</td>
+    <td class="tg-yw4l">Sets your local bbpr configuration file to the file specified.   <br>The specified path can be relative, absolute, or remote (http/https).  </td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr -g`</td>
+    <td class="tg-yw4l">Initializes a global bbpr configuration file for your repository.</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr -g reset`</td>
+    <td class="tg-yw4l">Resets your global bbpr configuration file to the default configuration.  </td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">`bbpr -g  &lt;path to configuration file&gt;`</td>
+    <td class="tg-yw4l">Sets your global bbpr configuration file to the file specified.   <br>The specified path can be relative, absolute, or remote (http/https).  </td>
+  </tr>
+</table>
 
 <h3>Configuration file</h3>  
 Here are all the properties you can set in your configuration file, whether global or local:
