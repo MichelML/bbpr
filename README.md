@@ -128,9 +128,9 @@ module.exports = {
     
 <h1 id="contribute">How to contribute</h1>
 
-**Ideas and suggestions are heavily encourage.**  
+**Ideas and suggestions are heavily encouraged.**  
   
-Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request, an issue, or any suggestion for improvements you might have.  
+Please do not hesitate to make any change at any time to <a href="https://github.com/MichelML/bbpr">_bbpr_</a> by submitting a pull request, an issue, or any suggestion for improvements you might have.  
   
   <h2 id="contribute-roadmap">Roadmap</h2>  
     
