@@ -12,11 +12,10 @@
 
 <h1 id="synopsis">Synopsis</h1>  
 
-_bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable, and fast command line program helping you standardize the pull request process between teammates. It is very easy to forget little details when doing a pull request, like a reviewer you had to add, or a description along your demo helping your teammates understand what they should review and where they should look for it. _bbpr_ partners up with you on that journey, so that your future pull requests will always be picture perfect.   
-
-<h1 id="synopsis">How it works</h1>  
-
-When you start a _bbpr_ session, you simply answer questions about your upcoming PR so that _bbpr_ can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, _bbpr_ sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
+_bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable program helping you making pull request right from your terminal.   
+   
+A positive side effect of using _bbpr_ is that it can also help you standardize the pull request process across members of your team.
+Forgetting little details when doing a pull request is very easy (forgetting to add a reviewer, not providing detailed specifications helping your teammates understand where they should focus their attention while reviewing, etc). _bbpr_ wants to partner up with you on that journey, so that your future pull requests will always be picture perfect.   
  
 <h1 id="installation">Installation</h1>
 <h3>Prerequisites</h3> 
@@ -24,41 +23,33 @@ When you start a _bbpr_ session, you simply answer questions about your upcoming
 First, make sure you have the latest stable versions of the following programs installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a> or <a href="https://www.mercurial-scm.org/">mercurial</a> depending on which version control system your team is using.   
 
 
-<h3>Installation</h3>
+<h3>Install globally</h3>
   
 The very best way to use the latest version of _bbpr_ is to install it globally on your computer:
 ```  
 npm install -g bbpr
 ```     
+then you can use the `bbpr`command from your terminal. But, read along, there is more.  
+
 <h1 id="Configuration">Use and Configuration</h1>  
 
-_bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your global _bbpr_ configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
-  
-`bbpr --cg` - opens your global configuration file so you can edit it manually.  
-  
-`bbpr --cg reset` - resets your global configuration file to the default configuration file.  
-
-`bbpr --cg allTrue` - fill your global configuration file with valid and positive values for each config property.  
-  
-`bbpr --cg <path to a local config js file>` - replaces your current global config file with the local config file specified.  
-  
-`bbpr --cg <path to a remote (http/https) config js file>` - replaces your current global config file with the remote config file specified.  
-  
-`bbpr --init` - initialize a bbpr.config.js file in your local directory.  
- 
-`bbpr --cl` - opens your local configuration file so you can edit it manually.  
+<h3>Usage</h3>
+_bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default, which means you can use it right after installing the module globally on your computer. _bbpr_ also leaves you with a series of commandline options in order to configure the program to your taste:  
    
-`bbpr --cl reset` - resets your local configuration file to the default configuration file.  
-
-`bbpr --cl allTrue` - fill your local configuration file with valid and positive values for each config property.  
   
-`bbpr --cl <path to a local config js file>` - replaces your current local config file with the local config file specified.  
+| Command                                 | Description                                                                                                                                                                                                                                                               |
+|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `bbpr`                                  | Starts the interactive pull request process.        bbpr first looks locally for a configuration file, and defaults to the global configuration file if it does not find one. Note that cached passwords are however always retrieved from the global configuration file. |
+| `bbpr init`                             | Initializes a local bbpr configuration file for your repository.                                                                                                                                                                                                          |
+| `bbpr -l`                               | Opens your local bbpr configuration file.                                                                                                                                                                                                                                 |
+| `bbpr -l reset`                         | Resets your local bbpr configuration file to the default configuration.                                                                                                                                                                                                   |
+| `bbpr -l <path to configuration file>`  | Sets your local bbpr configuration file to the file specified. The specified path can be relative, absolute, or remote (http/https).                                                                                                                                      |
+| `bbpr -g`                               | Initializes a global bbpr configuration file for your repository.                                                                                                                                                                                                         |
+| `bbpr -g reset`                         | Resets your global bbpr configuration file to the default configuration.                                                                                                                                                                                                  |
+| `bbpr -g  <path to configuration file>` | Sets your global bbpr configuration file to the file specified. The specified path can be relative, absolute, or remote (http/https).                                                                                                                                     |
   
-`bbpr --cl <path to a remote (http/https) config js file>` - replaces your current local config file with the remote config file specified. 
-
-__bbpr now also supports local configuration for each of your bitbucket repositories. To use this feature, simply add a valid bbpr.config.js configuration file at the root level of your repository.__  
-  
-Default configuration file overview:  
+<h3>Configuration file</h3>  
+Here are all the properties you can set in your configuration file, whether global or local:
 
 ```javascript 
 module.exports = {
@@ -72,7 +63,16 @@ module.exports = {
   demo: {
     shouldPrompt: false, // Boolean. Set to true if you'll need a demo link with your PR.
     shouldPromptDescription: false, // Boolean. Set to true if you'll need a description with your demo.
-    basePath: '' // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+    demoIntro: '', // String. Introduction appearing in your pull request description right before your demo url
+    basePath: '', // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+    // You can also provide a basePath with the below path variables as such https://mydemo.com/{{repositoryName}}/{{sourceBranch}}/{{orAnyPathVariableListedBelow}}
+    pathVariables: {
+      repositoryName: null, // null or Function with signature (repositoryName) => String. Formatting function for repositoryName.
+      repositoryOwner: null, // null or Function with signature (repositoryOwner) => String. Formatting function for repositoryOwner.
+      pullRequestAuthor: null, // null or Function with signature (pullRequestAuthor) => String. Formatting function for pullRequestAuthor.
+      sourceBranch: null, // null or Function with signature (sourceBranch) => String. Formatting function for sourceBranch.
+      destinationBranch: null // null or Function with signature (destinationBranch) => String. Formatting function for destinationBranch.
+    }
   },
   reviewers: {
     default: [], // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who are assign to reviewing your work. An empty Array is also valid.
@@ -91,10 +91,7 @@ module.exports = {
   }
 }
 ```  
-Once you configured _bbpr_ to your taste, you are ready to go. You can run `bbpr` from any local repository for which you want to make a pull request, and a session will start.
-
-That's it, may you and your teammates enjoy the _bbpr_ way of doing BitBucket pull requests!
-  
+    
 <h1 id="contribute">How to contribute</h1>
 
 Please do not hesitate to make any change at any time to _bbpr_ by submitting a pull request, an issue, or any suggestion for improvements you might have.  

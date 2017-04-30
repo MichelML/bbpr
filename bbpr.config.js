@@ -9,7 +9,7 @@ module.exports = {
   demo: {
     shouldPrompt: false, // Boolean. Set to true if you'll need a demo link with your PR.
     shouldPromptDescription: false, // Boolean. Set to true if you'll need a description with your demo.
-    demoIntro: '',
+    demoIntro: '', // String. Introduction appearing in your pull request description right before your demo url
     basePath: '', // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
     // You can also provide a basePath with the below path variables as such https://mydemo.com/{{repositoryName}}/{{sourceBranch}}/{{orAnyPathVariableListedBelow}}
     pathVariables: {
