@@ -76,7 +76,7 @@ _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by defa
 </table>
 
 <h3>Configuration file</h3>  
-Here are all the properties you can set in your configuration file, whether global or local:
+Here are all the properties you can set in your `bbpr.config.js` configuration file, whether global or local:
 
 ```javascript 
 module.exports = {
