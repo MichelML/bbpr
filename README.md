@@ -63,7 +63,7 @@ _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by defa
   </tr>
   <tr>
     <td class="tg-yw4l"><strong>bbpr -g</strong></td>
-    <td class="tg-yw4l">Initializes a global bbpr configuration file for your repository.</td>
+    <td class="tg-yw4l">Opens your global bbpr configuration file.</td>
   </tr>
   <tr>
     <td class="tg-yw4l"><strong>bbpr -g reset</strong></td>
