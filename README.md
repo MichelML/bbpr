@@ -36,13 +36,6 @@ then you can use the `bbpr`command from your terminal. But, read along, there is
 <h3>Usage</h3>
 _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default, which means you can use it right after installing the module globally on your computer. _bbpr_ also leaves you with a series of commandline options in order to configure the program to your taste:  
    
-  
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-yw4l{vertical-align:top}
-</style>
 <table class="tg">
   <tr>
     <th class="tg-yw4l">Command</th>
