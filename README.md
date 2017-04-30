@@ -19,20 +19,17 @@ _bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable,
 When you start a _bbpr_ session, you simply answer questions about your upcoming PR so that _bbpr_ can build it for you. Once you are done answering the questions, you can review all the information before sending your PR. Once you confirm each piece of information is accurate, _bbpr_ sends the pull request and redirects you to BitBucket if it is successful. If not, you will receive information about why it failed, and you'll be able to adjust. It's that simple.  
  
 <h1 id="installation">Installation</h1>
-<h3>Step 1: Prerequisites</h3> 
+<h3>Prerequisites</h3> 
   
 First, make sure you have the latest stable versions of the following programs installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a> or <a href="https://www.mercurial-scm.org/">mercurial</a> depending on which version control system your team is using.   
 
 
-<h3>Step 2: Npm Install</h3>
+<h3>Installation</h3>
   
 The very best way to use the latest version of _bbpr_ is to install it globally on your computer:
 ```  
 npm install -g bbpr
 ```     
-
-Congratulations, _bbpr_ is now installed properly and you can instantly use the `bbpr` terminal command from any local Mercurial repository linked to a remote BitBucket repository. However, a more useful way to use _bbpr_ is to configure it to your personal profile and taste.
-
 <h1 id="Configuration">Use and Configuration</h1>  
 
 _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default. That being said, it is recommended that you enter some information in it so it becomes faster to build your pull requests by being prompted with less questions to answer. You can edit your global _bbpr_ configuration file  (`bbpr.config.js`) any time with the following bbpr command options: 
