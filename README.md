@@ -12,7 +12,7 @@
 
 <h1 id="synopsis">Synopsis</h1>  
 
-_bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable program helping you making pull request right from your terminal.   
+_bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable program helping you making pull requests from your terminal.   
    
 A positive side effect of using _bbpr_ is that it can also help you standardize the pull request process across members of your team.
 Forgetting little details when doing a pull request is very easy (forgetting to add a reviewer, not providing detailed specifications helping your teammates understand where they should focus their attention while reviewing, etc). _bbpr_ wants to partner up with you on that journey, so that your future pull requests will always be picture perfect.   
@@ -43,7 +43,7 @@ _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by defa
   </tr>
   <tr>
     <td class="tg-yw4l"><strong>bbpr</strong></td>
-    <td class="tg-yw4l">Starts the interactive pull request process.    <br>   <br>bbpr first looks locally for a configuration file,   <br>and defaults to the global configuration file if it does not find one.    <br>   <br>Note that cached passwords are however always retrieved from    <br>the global configuration file.  </td>
+    <td class="tg-yw4l">Starts the interactive pull request process. <br>bbpr first looks locally for a configuration file,   <br>and defaults to the global configuration file if it does not find one.    <br>Note that cached passwords are however always retrieved from the global configuration file.  </td>
   </tr>
   <tr>
     <td class="tg-yw4l"><strong>bbpr init</strong></td>
