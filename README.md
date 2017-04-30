@@ -43,7 +43,7 @@ _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by defa
   </tr>
   <tr>
     <td class="tg-yw4l"><strong>bbpr</strong></td>
-    <td class="tg-yw4l">Starts the interactive pull request process. <br>bbpr first looks locally for a configuration file,   <br>and defaults to the global configuration file if it does not find one.    <br>Note that cached passwords are however always retrieved from the global configuration file.  </td>
+    <td class="tg-yw4l">Starts the interactive pull request process. <br><br>Bbpr first looks locally for a configuration file,   <br>and defaults to the global configuration file if it does not find one.<br>Note that cached passwords are however always retrieved from the global configuration file.  </td>
   </tr>
   <tr>
     <td class="tg-yw4l"><strong>bbpr init</strong></td>
