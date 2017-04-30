@@ -49,35 +49,35 @@ _bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by defa
     <th class="tg-yw4l">Description</th>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr`</td>
+    <td class="tg-yw4l"><strong>bbpr</strong></td>
     <td class="tg-yw4l">Starts the interactive pull request process.    <br>   <br>bbpr first looks locally for a configuration file,   <br>and defaults to the global configuration file if it does not find one.    <br>   <br>Note that cached passwords are however always retrieved from    <br>the global configuration file.  </td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr init`</td>
+    <td class="tg-yw4l"><strong>bbpr init</strong></td>
     <td class="tg-yw4l">Initializes a local bbpr configuration file for your repository.</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr -l`</td>
+    <td class="tg-yw4l"><strong>bbpr -l</strong></td>
     <td class="tg-yw4l">Opens your local bbpr configuration file.</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr -l reset`</td>
+    <td class="tg-yw4l"><strong>bbpr -l reset</strong></td>
     <td class="tg-yw4l">Resets your local bbpr configuration file to the default configuration.</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr -l &lt;path to configuration file&gt;`</td>
+    <td class="tg-yw4l"><strong>bbpr -l &lt;path to configuration file&gt;</strong></td>
     <td class="tg-yw4l">Sets your local bbpr configuration file to the file specified.   <br>The specified path can be relative, absolute, or remote (http/https).  </td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr -g`</td>
+    <td class="tg-yw4l"><strong>bbpr -g</strong></td>
     <td class="tg-yw4l">Initializes a global bbpr configuration file for your repository.</td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr -g reset`</td>
+    <td class="tg-yw4l"><strong>bbpr -g reset</strong></td>
     <td class="tg-yw4l">Resets your global bbpr configuration file to the default configuration.  </td>
   </tr>
   <tr>
-    <td class="tg-yw4l">`bbpr -g  &lt;path to configuration file&gt;`</td>
+    <td class="tg-yw4l"><strong>bbpr -g  &lt;path to configuration file&gt;</strong></td>
     <td class="tg-yw4l">Sets your global bbpr configuration file to the file specified.   <br>The specified path can be relative, absolute, or remote (http/https).  </td>
   </tr>
 </table>
