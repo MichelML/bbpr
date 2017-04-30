@@ -21,7 +21,7 @@ When you start a _bbpr_ session, you simply answer questions about your upcoming
 <h1 id="installation">Installation</h1>
 <h3>Step 1: Prerequisites</h3> 
   
-First, make sure you have the following installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a> or <a href="https://www.mercurial-scm.org/">mercurial</a> depending on which version control system your team is using.   
+First, make sure you have the latest stable versions of the following programs installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a> or <a href="https://www.mercurial-scm.org/">mercurial</a> depending on which version control system your team is using.   
 
 
 <h3>Step 2: Npm Install</h3>
@@ -111,16 +111,18 @@ Please do not hesitate to make any change at any time to _bbpr_ by submitting a 
   - allow git repositories to be handled - __DONE__  
   - better commandline options for configuration (local and global) __DONE__
   - fix pre-install and post-install script to preserve global config file of users __DONE__
-  - rethink demo link options   
-  - improved readme with more information, code examples, and cross-platform compatibility  
+  - rethink demo link options __DONE__ 
   - allow users to have local bbpr.config.js file for their repositories - __DONE__ 
   - reduce shelljs and bash dependency for before module install and after module install __DONE__
   - eliminate bash dependency for password caching __DONE__
+  - improve password caching procedure __DONE__
+  - improved readme with more information, code examples, and cross-platform compatibility  
   - unit tests everything - __IN PROGRESS__
   - allow PR updates through bbpr more explicitly 
+  - beautify code
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
-  - improve password caching procedure
+  - support github repositories
     
 <h1 id="maintainer">Maintainer</h1>
  
