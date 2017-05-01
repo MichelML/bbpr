@@ -122,7 +122,7 @@ module.exports = {
     
 <h1 id="contribute">How to contribute</h1>
 
-**Ideas and suggestions are heavily encouraged.**  
+**Ideas and suggestions are strongly encouraged. [What would be your needs?](mailto:michmoreau.l@gmail.com?Subject=bbpr%20Project)**  
   
 Please do not hesitate to make any change at any time to <a href="https://github.com/MichelML/bbpr">_bbpr_</a> by submitting a pull request, an issue, or any suggestion for improvements you might have.  
   
