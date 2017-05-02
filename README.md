@@ -139,6 +139,7 @@ Please do not hesitate to make any change at any time to <a href="https://github
   - eliminate bash dependency for password caching __DONE__
   - improve password caching procedure __DONE__
   - improved readme with more information, code examples, and cross-platform compatibility  
+  - detailed explanation on how to contribute in README
   - unit tests everything - __IN PROGRESS__
   - allow PR updates through bbpr more explicitly 
   - beautify code
