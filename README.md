@@ -141,7 +141,7 @@ Please do not hesitate to make any change at any time to <a href="https://github
   - improved readme with more information, code examples, and cross-platform compatibility  
   - detailed explanation on how to contribute in README  
   - unit tests everything - __IN PROGRESS__
-  - allow PR updates through bbpr more explicitly 
+  - allow PR updates through bbpr with granular options (update only one property: title, description, etc)
   - beautify code
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
