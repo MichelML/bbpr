@@ -20,6 +20,7 @@
   },
   "description": "Make pull requests through the Bitbucket API 2.0 from your terminal",
   "devDependencies": {
+    "jasmine": "^2.6.0",
     "standard": "^10.0.1"
   },
   "homepage": "https://github.com/MichelML/bbpr",
@@ -46,7 +47,8 @@
     "start": "node index",
     "preinstall": "node ./pre-install.js",
     "postinstall": "node ./post-install.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "node npm_scripts/watch.js",
+    "test": "node node_modules/jasmine/bin/jasmine.js"
   },
   "version": "3.2.11"
 }
