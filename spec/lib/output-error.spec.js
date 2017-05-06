@@ -1,4 +1,4 @@
-const outputError = require('../lib/output-error')
+const outputError = require('../../lib/output-error')
 
 describe('output-error.js', () => {
   let processExit
@@ -13,6 +13,12 @@ describe('output-error.js', () => {
 
   it('should not throw if argument pass to outputError is an object with a message property', () => {
     expect(() => outputError({ message: 'this is an error message'})).not.toThrow()
+  })
+
+  it('should not throw if is not an object with message or a string', () => {
+    expect(() => outputError()).not.toThrow()
+    expect(() => outputError({})).not.toThrow()
+    expect(() => outputError([])).not.toThrow()
   })
 
   it('should console log a message and an intro to the message', () => {
