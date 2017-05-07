@@ -9,6 +9,7 @@
 <a href='https://coveralls.io/github/MichelML/bbpr?branch=master'><img src='https://coveralls.io/repos/github/MichelML/bbpr/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href='https://github.com/MichelML/bbpr'><img src='https://david-dm.org/MichelML/bbpr.svg' alt='Dependencies Status' /></a>
 <a href="https://github.com/MichelML/bbpr"><img src="https://badge.fury.io/js/bbpr.svg"  alt='Package version' ></a>
+<a href="https://badge.fury.io/gh/MichelMl%2Fbbpr"><img src="https://badge.fury.io/gh/MichelMl%2Fbbpr.svg" alt="GitHub version"></a>
 </div>
 <br>
 <div align="center">
