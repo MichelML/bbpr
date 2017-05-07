@@ -3,9 +3,11 @@
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
 <br>
 <h4>Light Speed Pull Requests from Your Terminal</h4>
+<a href="https://npmjs.org/package/bbpr"><img src="https://nodei.co/npm/bbpr.png"  alt='Build Status'></img></a>
 <a href="https://github.com/MichelML/bbpr"><img src="https://travis-ci.org/MichelML/bbpr.svg?branch=master"  alt='Build Status'></img></a>
 <a href='https://coveralls.io/github/MichelML/bbpr?branch=master'><img src='https://coveralls.io/repos/github/MichelML/bbpr/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href='https://github.com/MichelML/bbpr'><img src='https://david-dm.org/MichelML/bbpr.svg' alt='Dependencies Status' /></a>
+<a href="https://github.com/MichelML/bbpr"><img src="https://badge.fury.io/js/bbpr.svg"  alt='Package version' ></a>
 </div>
 <br>
 <div align="center">
