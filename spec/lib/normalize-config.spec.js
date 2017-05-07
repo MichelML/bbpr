@@ -1,1 +1,5 @@
-// const normalize = require('../../lib/normalize-config')
+describe('normalize-config.js', () => {
+  it('should require without error', () => {
+    expect(() => require('../../lib/normalize-config')).not.toThrow()
+  })
+})
