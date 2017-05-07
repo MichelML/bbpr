@@ -1,4 +1,3 @@
-// const presentInfo = require('../../lib/present-info')
 describe('present-info.js', () => {
   const vcs = require('../../lib/vcs')
   const reviewStrings = require('../../lib/strings').infoReview

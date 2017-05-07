@@ -1,4 +1,3 @@
-// const configFile = require('../../lib/config-file')
 describe('config-file.js', () => {
   const shell = require('shelljs')
 

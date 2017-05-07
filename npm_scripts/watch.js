@@ -2,8 +2,22 @@ const fs = require('fs')
 const jasmine = require('./jasmine')
 const paths = ['./']
 
-paths.forEach(path => {
-  fs.watch(path, {encoding: 'buffer', recursive: true}, (eventType, filename) => {
-    if (eventType === 'change') jasmine()
+function watch () {
+  paths.forEach(path => {
+    fs.watch(path, {encoding: 'buffer', recursive: true}, testWithJasmineOnChange)
   })
-})
+}
+
+function testWithJasmineOnChange (eventType) {
+  if (eventType === 'change') jasmine()
+}
+
+if (require.main === module) {
+  watch()
+}
+
+module.exports = {
+  paths,
+  testWithJasmineOnChange,
+  watch
+}

@@ -1,4 +1,3 @@
-// const strings = require('../../lib/strings')
 describe('strings.js', () => {
   it('should require without error', () => {
     expect(() => require('../../lib/strings')).not.toThrow()
