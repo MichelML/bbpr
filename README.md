@@ -2,6 +2,7 @@
 <br>
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr.png' width='150'>
 <br>
+<a href="https://travis-ci.org/MichelML/bbpr"><img src="https://travis-ci.org/MichelML/bbpr.svg?branch=master"></img></a>
 <a href='https://coveralls.io/github/MichelML/bbpr?branch=master'><img src='https://coveralls.io/repos/github/MichelML/bbpr/badge.svg?branch=master' alt='Coverage Status' /></a>
 <h4>Light Speed Pull Requests from Your Terminal</h4>
 </div>
