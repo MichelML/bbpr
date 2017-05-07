@@ -153,3 +153,6 @@ Please do not hesitate to make any change at any time to <a href="https://github
 <h1 id="maintainer">Maintainer</h1>
  
 Michel Moreau - [michmoreau.l@gmail.com](mailto:michmoreau.l@gmail.com?Subject=bbpr%20Project) 
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/MichelML/bbpr.svg)](https://greenkeeper.io/)
