@@ -18,6 +18,8 @@
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.gif'>
 <br>
+<br>
+
 <a href="#quick-start">Quick Start</a><br>
 <a href="#synopsis">Synopsis</a><br>
 <a href="#features">Features</a><br>
