@@ -32,14 +32,20 @@ describe('config-file.js', () => {
       it('should call the default open command if shell exec return an error', () => {
         const exec = spyOn(shell, 'exec').and.returnValue({stderr: 'error'})
         configFile.openConfig()
-        expect(exec).toHaveBeenCalledWith(`open ${configFile.configFile}`)
+
+        if (process.platform === 'darwin') expect(exec).toHaveBeenCalledWith(`open ${configFile.configFile}`)
+        if (process.platform === 'win32') expect(exec).toHaveBeenCalledWith(`start ${configFile.configFile}`)
+        if (process.platform === 'anythingelse') expect(exec).toHaveBeenCalledWith(`xdg-open ${configFile.configFile}`)
       })
 
       it('should call the default open command if globalVars open command is undefined', () => {
         configFile.globalVars.openFileCommand = undefined
         const exec = spyOn(shell, 'exec').and.returnValue({stderr: 'error'})
         configFile.openConfig()
-        expect(exec).toHaveBeenCalledWith(`open ${configFile.configFile}`)
+
+        if (process.platform === 'darwin') expect(exec).toHaveBeenCalledWith(`open ${configFile.configFile}`)
+        if (process.platform === 'win32') expect(exec).toHaveBeenCalledWith(`start ${configFile.configFile}`)
+        if (process.platform === 'anythingelse') expect(exec).toHaveBeenCalledWith(`xdg-open ${configFile.configFile}`)
       })
 
       it('should call the default open command if globalVars open command is not of type string', () => {
@@ -48,7 +54,10 @@ describe('config-file.js', () => {
         dummyValues.forEach(val => {
           configFile.globalVars.openFileCommand = val
           configFile.openConfig()
-          expect(exec).toHaveBeenCalledWith(`open ${configFile.configFile}`)
+
+          if (process.platform === 'darwin') expect(exec).toHaveBeenCalledWith(`open ${configFile.configFile}`)
+          if (process.platform === 'win32') expect(exec).toHaveBeenCalledWith(`start ${configFile.configFile}`)
+          if (process.platform === 'anythingelse') expect(exec).toHaveBeenCalledWith(`xdg-open ${configFile.configFile}`)
         })
       })
     })
