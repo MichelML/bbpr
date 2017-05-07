@@ -61,5 +61,23 @@ describe('config-file.js', () => {
         })
       })
     })
+
+    describe('resetConfig', () => {
+      const prompt = require('co-prompt')
+      let confirm, cp, exit, log
+
+      beforeEach(() => {
+        log = spyOn(console, 'log')
+        confirm = spyOn(prompt, 'confirm').and.callFake(() => new Promise((resolve) => resolve()))
+        exit = spyOn(process, 'exit')
+        cp = spyOn(shell, 'cp')
+      })
+
+      it('should prompt the user to confirm the action with a log message', () => {
+        configFile.resetConfig()
+        expect(log).toHaveBeenCalledTimes(1)
+        expect(confirm).toHaveBeenCalledTimes(1)
+      })
+    })
   })
 })
