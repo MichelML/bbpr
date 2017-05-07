@@ -13,6 +13,7 @@ const jasmine = () => {
 
   jas.on('close', () => {
     console.log(`Test run completed on ${formatDate(new Date())}`)
+    if (require.main === module) process.exit()
   })
 }
 
