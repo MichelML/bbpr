@@ -4,8 +4,6 @@ const paths = ['./lib/', './spec/']
 
 paths.forEach(path => {
   fs.watch(path, {encoding: 'buffer', recursive: true}, (eventType, filename) => {
-    if (eventType === 'change') {
-      jasmine()
-    }
+    if (eventType === 'change') jasmine()
   })
 })
