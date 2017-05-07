@@ -2,9 +2,11 @@ const outputError = require('../../lib/output-error')
 
 describe('output-error.js', () => {
   let processExit
+  let consoleLog
 
   beforeEach(() => {
     processExit = spyOn(process, 'exit')
+    consoleLog = spyOn(console, 'log')
   })
 
   it('should not throw if argument pass to outputError is a string', () => {
@@ -22,7 +24,6 @@ describe('output-error.js', () => {
   })
 
   it('should console log a message and an intro to the message', () => {
-    const consoleLog = spyOn(console, 'log')
     outputError('this is an error string')
     expect(consoleLog).toHaveBeenCalledTimes(2)
   })
