@@ -5,6 +5,7 @@
 <h4>Light Speed Pull Requests from Your Terminal</h4>
 <a href="https://npmjs.org/package/bbpr"><img src="https://nodei.co/npm/bbpr.png"  alt='Build Status'></img></a>
 <br>
+<a href="https://npmjs.org/package/bbpr"><img src="https://img.shields.io/npm/v/npm.svg"  alt='npm version'></img></a>
 <a href="https://npmjs.org/package/bbpr"><img src="https://travis-ci.org/MichelML/bbpr.svg?branch=master"  alt='Build Status'></img></a>
 <a href='https://npmjs.org/package/bbpr'><img src='https://coveralls.io/repos/github/MichelML/bbpr/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href='https://npmjs.org/package/bbpr'><img src='https://david-dm.org/MichelML/bbpr.svg' alt='Dependencies Status' /></a>
