@@ -19,6 +19,14 @@
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.gif'>
 </div>
 
+<h1 id="quick-start">Quick start</h1>  
+  
+```  
+npm install -g bbpr
+``` 
+  
+Use the `bbpr`command from a feature branch to start a pull request process.  
+
 <h1 id="synopsis">Synopsis</h1>  
 
 _bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable program helping you making pull requests from your terminal.   
@@ -26,15 +34,23 @@ _bbpr_ (BitBucket Pull Requests) is a cross-platform, interactive, configurable 
 A positive side effect of using _bbpr_ is that it can also help you standardize the pull request process across members of your team.
 Forgetting little details when doing a pull request is very easy (forgetting to add a reviewer, not providing detailed specifications helping your teammates understand where they should focus their attention while reviewing, etc). _bbpr_ wants to partner up with you on that journey, so that your future pull requests will always be picture perfect.   
  
+<h1 id="features">Features</h1>  
+  
+- Comprehensive pull request creation command to use from your terminal  
+- Cross-platform compatibility for Windows, MacOS, and Linux  
+- Global (for all your repositories) and local (repository-specific) configuration options 
+- Easy integration/importation of configuration files whether located locally or remotely (http/https)  
+- Granular options for destination branch selection, password caching, reviewers, source branch closing, demo urls, and pull request description  
+- BitBucket markdown support for pull request descriptions  
+  
 <h1 id="installation">Installation</h1>
 <h3>Prerequisites</h3> 
   
 First, make sure you have the latest stable versions of the following programs installed on your computer: <a href="https://nodejs.org/en/">node.js</a>, <a href="https://www.npmjs.com/">npm</a>, and <a href="https://git-scm.com/">git</a> or <a href="https://www.mercurial-scm.org/">mercurial</a> depending on which version control system your team is using.   
-
-
+  
 <h3>Install globally</h3>
   
-The very best way to use the latest version of _bbpr_ is to install it globally on your computer:
+The single best way to use _bbpr_ is to install it globally on your computer:
 ```  
 npm install -g bbpr
 ```     
@@ -149,14 +165,15 @@ Please do not hesitate to make any change at any time to <a href="https://github
   - reduce shelljs and bash dependency for before module install and after module install __DONE__
   - eliminate bash dependency for password caching __DONE__
   - improve password caching procedure __DONE__
-  - improved readme with more information, code examples, and cross-platform compatibility  
-  - detailed explanation on how to contribute in README  
+  - improved readme with more information, code examples, and cross-platform compatibility _IN PROGRESS_  
+  - detailed explanation on how to contribute in README _IN PROGRESS_  
   - unit tests everything - __IN PROGRESS__
   - allow PR updates through bbpr with granular options (update only one property: title, description, etc)
   - beautify code
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
-  - support github repositories
+  - support github repositories 
+  - view all pull requests for a specific remote repository
     
 <h1 id="maintainer">Maintainer</h1>
  
