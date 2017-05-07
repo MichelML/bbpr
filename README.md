@@ -17,7 +17,15 @@
 <br>
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.gif'>
-</div>
+</div>  
+  
+<a href="#quick-start">Quick Start</a><br>
+<a href="#synopsis">Synopsis</a><br>
+<a href="#features">Features</a><br>
+<a href="#installation">Installation</a><br>
+<a href="#configuration">Use and Configuration</a><br>
+<a href="#contribute">How to Contribute</a><br>
+<a href="#maintainer">Maintainer</a><br>
 
 <h1 id="quick-start">Quick start</h1>  
   
@@ -42,7 +50,7 @@ Forgetting little details when doing a pull request is very easy (forgetting to 
 - Cross-platform compatibility for Windows, MacOS, and Linux  
 - Global (for all your repositories) and local (repository-specific) configuration options 
 - Easy integration/importation of configuration files whether located locally or remotely (http/https)  
-- Granular options for destination branch selection, password caching, reviewers, source branch closing, demo urls, and pull request description  
+- Granular options for destination branch selection, password caching, reviewers addition, source branch closing, demo url addition, and pull request description  
 - BitBucket markdown support for pull request descriptions  
   
 <h1 id="installation">Installation</h1>
