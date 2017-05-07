@@ -175,7 +175,8 @@ Please do not hesitate to make any change at any time to <a href="https://github
   - check if destination branch exists remotely before making pull request  
   - improve normalization of configuration file  
   - support github repositories 
-  - view all pull requests for a specific remote repository
+  - view all pull requests for a specific remote repository  
+  - add code documentation
     
 <h1 id="maintainer">Maintainer</h1>
  
