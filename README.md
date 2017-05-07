@@ -25,7 +25,9 @@
 npm install -g bbpr
 ``` 
   
-Use the `bbpr`command from a feature branch to start a pull request process.  
+Use the `bbpr`command from a feature branch to start a pull request process.   
+  
+Please [log an issue](https://github.com/MichelML/bbpr/issues) or [send an email](mailto:michmoreau.l@gmail.com?Subject=bbpr%20Project) if you get any error during the quick start process.
 
 <h1 id="synopsis">Synopsis</h1>  
 
