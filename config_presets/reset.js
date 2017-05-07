@@ -9,7 +9,16 @@ module.exports = {
   demo: {
     shouldPrompt: false, // Boolean. Set to true if you'll need a demo link with your PR.
     shouldPromptDescription: false, // Boolean. Set to true if you'll need a description with your demo.
-    basePath: '' // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+    demoIntro: '', // String. Introduction appearing in your pull request description right before your demo url
+    basePath: '', // String. Base path to your demo (ex. https://mydemo.com/). Provide only if needing a demo. It will be ignored otherwise.
+    // You can also provide a basePath with the below path variables as such https://mydemo.com/{{repositoryName}}/{{sourceBranch}}/{{orAnyPathVariableListedBelow}}
+    pathVariables: {
+      repositoryName: null, // null or Function with signature (repositoryName) => String. Formatting function for repositoryName.
+      repositoryOwner: null, // null or Function with signature (repositoryOwner) => String. Formatting function for repositoryOwner.
+      pullRequestAuthor: null, // null or Function with signature (pullRequestAuthor) => String. Formatting function for pullRequestAuthor.
+      sourceBranch: null, // null or Function with signature (sourceBranch) => String. Formatting function for sourceBranch.
+      destinationBranch: null // null or Function with signature (destinationBranch) => String. Formatting function for destinationBranch.
+    }
   },
   reviewers: {
     default: [], // Array of String. Each entry must be a valid BitBucket username. These are the reviewers who are assign to reviewing your work. An empty Array is also valid.

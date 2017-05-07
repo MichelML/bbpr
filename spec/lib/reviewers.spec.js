@@ -1,1 +1,1 @@
-const reviewers = require('../../lib/reviewers')
+// const reviewers = require('../../lib/reviewers')

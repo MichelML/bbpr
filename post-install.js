@@ -2,10 +2,26 @@
 const fs = require('fs')
 const path = require('path')
 const pathToNodeModules = path.resolve().substr(0, path.resolve().lastIndexOf('/'))
-const srcPath = path.join(pathToNodeModules, 'bbpr.backup.config.js')
+const srcFileName = 'bbpr.backup.config.js'
+const srcPath = path.join(pathToNodeModules, srcFileName)
 const destPath = './bbpr.config.js'
 
-if (fs.existsSync(srcPath)) {
-  fs.writeFileSync(destPath, fs.readFileSync(srcPath, 'utf8'))
-  fs.unlinkSync(srcPath)
+function writeBackupConfig () {
+  if (fs.existsSync(srcPath)) {
+    const srcFile = fs.readFileSync(srcPath, 'utf8')
+    fs.writeFileSync(destPath, srcFile)
+    fs.unlinkSync(srcPath)
+  }
+}
+
+if (require.main === module) {
+  writeBackupConfig()
+}
+
+module.exports = {
+  destPath,
+  pathToNodeModules,
+  srcFileName,
+  srcPath,
+  writeBackupConfig
 }

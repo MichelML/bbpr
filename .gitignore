@@ -80,3 +80,6 @@ tags
 
 # sed replacement files
 *.js-n
+
+# visual studio code
+.vscode

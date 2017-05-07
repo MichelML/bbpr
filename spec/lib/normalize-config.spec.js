@@ -1,1 +1,1 @@
-const normalize = require('../../lib/normalize-config')
+// const normalize = require('../../lib/normalize-config')

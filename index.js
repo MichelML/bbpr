@@ -4,8 +4,6 @@ const configFile = require('./lib/config-file')
 
 if (terminalOptions.getConfigFlag() && terminalOptions.isResetConfigRequested()) {
   configFile.resetConfig()
-} else if (terminalOptions.getConfigFlag() && terminalOptions.isAllTrueConfigRequested()) {
-  configFile.setAllTrueConfig()
 } else if (terminalOptions.getConfigFlag() && terminalOptions.isTailoredConfigRequested() && terminalOptions.isRemoteConfigRequested()) {
   configFile.setRemoteConfig(terminalOptions.getTailoredConfigFilePath())
 } else if (terminalOptions.getConfigFlag() && terminalOptions.isTailoredConfigRequested()) {
