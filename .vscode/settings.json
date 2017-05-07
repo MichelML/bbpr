@@ -1,9 +1,0 @@
-{
-    "standard.enable": true,
-    "standard.validate": [
-        "javascript",
-        "javascriptreact",
-        "html"
-    ],
-    "standard.autoFixOnSave": true
-}
