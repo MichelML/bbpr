@@ -17,8 +17,7 @@
 <br>
 <div align="center">
 <img src='https://raw.githubusercontent.com/MichelML/bbpr/master/media/bbpr2.gif'>
-</div>  
-  
+<br>
 <a href="#quick-start">Quick Start</a><br>
 <a href="#synopsis">Synopsis</a><br>
 <a href="#features">Features</a><br>
@@ -26,6 +25,7 @@
 <a href="#configuration">Use and Configuration</a><br>
 <a href="#contribute">How to Contribute</a><br>
 <a href="#maintainer">Maintainer</a><br>
+</div>  
 
 <h1 id="quick-start">Quick start</h1>  
   
