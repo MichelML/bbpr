@@ -71,7 +71,7 @@ then you can use the `bbpr`command from your terminal. But, read along, there is
 <h1 id="configuration">Use and Configuration</h1>  
 <h3>Usage</h3>  
 
-_bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default, which means you can use it right after installing the module globally on your computer. _bbpr_ also leaves you with a series of commandline options in order to configure the program to your taste:  
+_bbpr_ comes bundled with a global configuration file (`bbpr.config.js`) by default, which means you can use it right after installing the module globally on your computer with the `bbpr` terminal command. _bbpr_ also leaves you with a series of commandline options in order to configure the program to your taste:  
    
 <table class="tg">
   <tr>
