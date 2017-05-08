@@ -66,7 +66,7 @@ The single best way to use _bbpr_ is to install it globally on your computer:
 ```  
 npm install -g bbpr
 ```     
-then you can use the `bbpr`command from your terminal. But, read along, there is more.  
+then you can use the `bbpr` command from your terminal. But, read along, there is more.  
 
 <h1 id="configuration">Use and Configuration</h1>  
 <h3>Usage</h3>  
