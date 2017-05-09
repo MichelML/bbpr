@@ -21,7 +21,6 @@
   "description": "Make pull requests through the Bitbucket API 2.0 from your terminal",
   "devDependencies": {
     "codecov": "^2.1.0",
-    "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
     "jasmine": "^2.6.0",
     "standard": "^10.0.2"
