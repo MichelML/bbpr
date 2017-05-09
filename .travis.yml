@@ -3,6 +3,11 @@ language: node_js
 node_js:
   - 6
 
+os:
+  - linux
+  - osx
+  - windows
+
 notifications:
   irc: "irc.freenode.org#travis"
 
