@@ -7,7 +7,7 @@
 <br>
 <a href="https://npmjs.org/package/bbpr"><img src="https://badge.fury.io/js/bbpr.svg"  alt='Package version' ></a>
 <a href="https://npmjs.org/package/bbpr"><img src="https://travis-ci.org/MichelML/bbpr.svg?branch=master"  alt='Build Status'></img></a>
-<a href='https://npmjs.org/package/bbpr'><img src='https://coveralls.io/repos/github/MichelML/bbpr/badge.svg?branch=master' alt='Coverage Status' /></a>
+<a href="https://npmjs.org/package/bbpr"><img src="https://codecov.io/gh/MichelML/bbpr/branch/master/graph/badge.svg" alt="Codecov" /></a>
 <a href='https://npmjs.org/package/bbpr'><img src='https://david-dm.org/MichelML/bbpr.svg' alt='Dependencies Status' /></a>
 <a href="https://npmjs.org/package/bbpr"><img src="https://badge.fury.io/gh/MichelMl%2Fbbpr.svg" alt="GitHub version"></a>
 <a href="https://npmjs.org/package/bbpr"><img src="https://img.shields.io/npm/dm/bbpr.svg" alt="Downloads per month"></a>
