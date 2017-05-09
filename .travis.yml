@@ -10,9 +10,6 @@ os:
 notifications:
   irc: "irc.freenode.org#travis"
 
-install:
-  - npm install -g codecov
-
 after_script:
   - istanbul cover node_modules/jasmine/bin/jasmine.js
-  - codecov
+  - ./node_modules/.bin/codecov
