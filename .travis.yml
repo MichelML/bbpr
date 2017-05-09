@@ -10,4 +10,9 @@ os:
 notifications:
   irc: "irc.freenode.org#travis"
 
-after_script: istanbul cover ./node_modules/jasmine/bin/jasmine.js --captureExceptions && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+install:
+  - npm install -g codecov
+
+script:
+  - istanbul cover node_modules\jasmine\bin\jasmine.js
+  - codecov
