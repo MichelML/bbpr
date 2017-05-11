@@ -19,6 +19,11 @@ describe('post-install.js', () => {
       fsUnlinkSync = spyOn(fs, 'unlinkSync')
     })
 
+    it('should not call fsWriteFileSync on require only', () => {
+      require('../post-install')
+      expect(fsWriteFileSync).not.toHaveBeenCalled()
+    })
+
     it('should check if a bbpr.backup.config.js file exists', () => {
       postInstall.writeBackupConfig()
       expect(fsExistsSync.calls.mostRecent().args[0]).toContain(postInstall.srcPath)
