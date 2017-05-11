@@ -30,4 +30,5 @@ const formatDate = (d) => {
 
 if (require.main === module) jasmine()
 
-module.exports = jasmine
+module.exports.jasmine = jasmine
+module.exports.formatDate = formatDate

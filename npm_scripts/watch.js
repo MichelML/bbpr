@@ -9,7 +9,7 @@ function watch () {
 }
 
 function testWithJasmineOnChange (eventType) {
-  if (eventType === 'change') jasmine()
+  if (eventType === 'change') jasmine.jasmine()
 }
 
 if (require.main === module) {
