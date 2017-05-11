@@ -18,6 +18,11 @@ describe('pre-install.js', () => {
       fsReadFileSync = spyOn(fs, 'readFileSync')
     })
 
+    it('should not call fsWriteFileSync on require only', () => {
+      require('../pre-install')
+      expect(fsWriteFileSync).not.toHaveBeenCalled()
+    })
+
     it('should check if a bbpr.backup.config.js file exists', () => {
       preInstall.backupConfig()
       expect(fsExistsSync.calls.mostRecent().args[0]).toContain(preInstall.srcPath)
