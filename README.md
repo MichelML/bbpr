@@ -186,6 +186,7 @@ Please do not hesitate to make any change at any time to <a href="https://github
   - improve normalization of configuration file  
   - support github repositories 
   - view all pull requests for a specific remote repository  
+  - get existing pull requests with granular options
   - add code documentation
     
 <h1 id="maintainer">Maintainer</h1>
