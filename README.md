@@ -177,8 +177,8 @@ Please do not hesitate to make any change at any time to <a href="https://github
   - reduce shelljs and bash dependency for before module install and after module install __DONE__
   - eliminate bash dependency for password caching __DONE__
   - improve password caching procedure __DONE__
-  - improved readme with more information, code examples, and cross-platform compatibility _IN PROGRESS_  
-  - detailed explanation on how to contribute in README _IN PROGRESS_  
+  - improved readme with more information, code examples, and cross-platform compatibility __IN PROGRESS__  
+  - detailed explanation on how to contribute in README __IN PROGRESS__  
   - unit tests everything - __IN PROGRESS__
   - allow PR updates through bbpr with granular options (update only one property: title, description, etc)
   - beautify code
