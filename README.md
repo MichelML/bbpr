@@ -161,7 +161,7 @@ module.exports = {
 
 **Ideas and suggestions are strongly encouraged. [What would be your needs?](mailto:michmoreau.l@gmail.com?Subject=bbpr%20Project)**  
   
-Please do not hesitate to make any change at any time to <a href="https://github.com/MichelML/bbpr">_bbpr_</a> by submitting a pull request, an issue, or any suggestion for improvements you might have.  
+Please do not hesitate to make any change at any time to <a href="https://github.com/MichelML/bbpr">_bbpr_</a> by submitting a pull request, an issue, or any suggestion for improvements.  
   
   <h2 id="contribute-roadmap">Roadmap</h2>  
     
