@@ -30,5 +30,22 @@ describe('pr.js', () => {
         expect(typeof JSON.parse(pr.buildPullRequest(infoMock).postRequestJSON)).toBe('object')
       })
     })
+
+    describe('getPullRequestJSON', () => {
+      it('should return a string', () => {
+        expect(typeof pr.getPullRequestJSON({})).toBe('string')
+      })
+
+      it('should parse to an object', () => {
+        expect(typeof JSON.parse(pr.getPullRequestJSON({}))).toBe('object')
+      })
+
+      it('should contain all keys to make a bitbucket valid request', () => {
+        const object = JSON.parse(pr.getPullRequestJSON({}))
+        const mainKeys = ['title', 'description', 'source', 'destination', 'reviewers', 'close_source_branch'].forEach((prop) => {
+          expect(Object.keys(object)).toContain(prop)
+        })
+      })
+    })
   })
 })
