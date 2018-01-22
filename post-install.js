@@ -18,6 +18,10 @@ if (require.main === module) {
   writeBackupConfig()
 }
 
+console.log(__dirname)
+console.log(path.resolve('../../', __dirname))
+console.log(process.cwd())
+
 module.exports = {
   destPath,
   pathToNodeModules,
